@@ -31,6 +31,9 @@
     self = [super initWithFrame:frame];
     if (self) {
         
+        //背景色
+        self.backgroundColor = R_G_B_16(0xf0f0f0);
+        
         _titleArr = titleArr;
         //添加子视图
         UIView * baseView = [[UIView alloc] init];
@@ -127,4 +130,6 @@
 
     }
 }
+
+
 @end

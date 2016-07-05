@@ -12,8 +12,9 @@
 #import "ZRSearchView.h"
 #import "ZRHomeCellOne.h"
 #import "ZRHomeCellTwo.h"
-
+#import "ZRLookForTasteController.h"
 #define NAVBAR_CHANGE_POINT 50
+#define NAVCOLOR [UIColor colorWithRed:0/255.0 green:175/255.0 blue:240/255.0 alpha:1]
 @interface ZRHomeController ()<UITableViewDelegate,UITableViewDataSource>
 
 @property (nonatomic , weak) UITableView * homeTableView;
@@ -40,6 +41,23 @@
         homeTableView.estimatedRowHeight = 120.0;
         
         ZRHomeHeadView * headView = [[ZRHomeHeadView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, 409)];
+        WS(ws)
+        headView.clickBtn = ^(NSInteger index){
+          
+            switch (index) {
+                case 0: //寻味
+                {
+                    ZRLookForTasteController * lookVC = [[ZRLookForTasteController alloc] init];
+                    lookVC.title = @"寻味";
+                    [ws.navigationController pushViewController:lookVC animated:YES];
+                    
+                }
+                    break;
+                    
+                default:
+                    break;
+            }
+        };
         
         homeTableView.tableHeaderView = headView;
     }
@@ -52,6 +70,11 @@
     [super viewDidLoad];
     [self.navigationController.navigationBar lt_setBackgroundColor:[UIColor clearColor]];
     
+    if ([self respondsToSelector:@selector(edgesForExtendedLayout)])
+    {
+        self.edgesForExtendedLayout = UIRectEdgeAll;
+        
+    }
     //等model
     self.homeTableView.delegate = self;
     self.homeTableView.dataSource = self;
@@ -70,16 +93,16 @@
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
 
+     [self.navigationController.navigationBar lt_setBackgroundColor:[NAVCOLOR colorWithAlphaComponent:0]];
     [self.navigationController.navigationBar setShadowImage:[UIImage new]];
 
 }
 
--(void)viewDidDisappear:(BOOL)animated{
+
+-(void)viewWillDisappear:(BOOL)animated{
     [super viewDidDisappear:animated];
-     [self.navigationController.navigationBar lt_reset];
-
+    [self.navigationController.navigationBar lt_reset];
 }
-
 #pragma mark - 创建搜索框
 
 - (void)createSearchTitle{
@@ -199,14 +222,13 @@
 
 #pragma mark -- 监听滑动距离
 -(void)scrollViewDidScroll:(UIScrollView *)scrollView{
-    UIColor * color = [UIColor colorWithRed:0/255.0 green:175/255.0 blue:240/255.0 alpha:1];
     CGFloat offsetY = scrollView.contentOffset.y;
 
     if (offsetY > 0) {
         CGFloat alpha = 1 - ((64 - offsetY) / 64);
-        [self.navigationController.navigationBar lt_setBackgroundColor:[color colorWithAlphaComponent:alpha]];
+        [self.navigationController.navigationBar lt_setBackgroundColor:[NAVCOLOR colorWithAlphaComponent:alpha]];
     } else {
-        [self.navigationController.navigationBar lt_setBackgroundColor:[color colorWithAlphaComponent:0]];
+        [self.navigationController.navigationBar lt_setBackgroundColor:[NAVCOLOR colorWithAlphaComponent:0]];
     }
 }
 

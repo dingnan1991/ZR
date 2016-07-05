@@ -99,10 +99,10 @@
         UIButton * btn = [[UIButton alloc] initWithFrame:CGRectMake(btnX, btnY, btnWH, btnWH)];
         
         [btnView addSubview:btn];
-        
+        btn.tag = i;
         //设置按钮样式
         [btn setImage:[UIImage imageNamed:@"find"] forState:UIControlStateNormal];
-        
+        [btn addTarget:self action:@selector(BtnClick:) forControlEvents:UIControlEventTouchUpInside];
         
         //创建 下方文字
         UILabel * btnTitle = [[UILabel alloc] init];
@@ -121,4 +121,12 @@
     }
 }
 
+
+#pragma mark -- 点击事件
+- (void)BtnClick :(UIButton *)btn{
+    
+    if (self.clickBtn) {
+        self.clickBtn(btn.tag);
+    }
+}
 @end

@@ -27,11 +27,14 @@
     dict[NSFontAttributeName] = [UIFont systemFontOfSize:18];
     [item setTitleTextAttributes:dict forState:UIControlStateNormal];
     
-    [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
-    [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithRed:0/255.0 green:175/255.0 blue:240/255.0 alpha:1]];
+    [[UINavigationBar appearance] setTintColor:R_G_B_16(0x555555)];
+//    [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithRed:0/255.0 green:175/255.0 blue:240/255.0 alpha:1]];
+    [[UINavigationBar appearance] setBarTintColor:R_G_B_16(0xfafafa)];
     [[UINavigationBar appearance] setTitleTextAttributes: [NSDictionary dictionaryWithObjectsAndKeys:
-                                                           [UIColor whiteColor], NSForegroundColorAttributeName, [UIFont systemFontOfSize:21], NSFontAttributeName, nil]];
-    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+                                                           R_G_B_16(0x555555), NSForegroundColorAttributeName, [UIFont systemFontOfSize:21], NSFontAttributeName, nil]];
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleDefault];
+    
+
 }
 
 

@@ -49,8 +49,6 @@ static NSString *ID = @"cell";
     //setUp RightBarButton For NavigationBar
     [self setUpRightBarButton];
     
-    
-    
 
 }
 
@@ -96,7 +94,6 @@ static NSString *ID = @"cell";
 #pragma mark - ZRSegmentViewDelegate methods
 -(void)segmentView:(ZRSegmentView *)segmentView index:(NSInteger)index
 {
-    NSLog(@"dn==========%ld",(long)index);
     NSIndexPath *indexPath = [NSIndexPath indexPathForRow:index inSection:0];
     [self.collectionView scrollToItemAtIndexPath:indexPath atScrollPosition:UICollectionViewScrollPositionNone animated:YES];
 }

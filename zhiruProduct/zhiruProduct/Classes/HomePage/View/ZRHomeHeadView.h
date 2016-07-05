@@ -15,5 +15,5 @@
  */
 @property (nonatomic , copy) void (^clickImg)(NSInteger index,NSString * imageURL,UIImageView * imgView);
 
-
+@property (nonatomic , copy) void (^clickBtn)(NSInteger index);
 @end
