@@ -18,6 +18,8 @@
 #import "ZRBaseViewController.h"
 #import "UIImageView+WebCache.h"
 
+#import "NSString+ZRString.h"
+
 #endif
 
 //----------------------ABOUT SCREEN & SIZE 屏幕&尺寸 ----------------------------
@@ -180,7 +182,8 @@ alpha:1.0]
 #define IMAGE(A) [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:A ofType:nil]]
 
 //DEFINE IMAGE      定义UIImage对象
-#define ImageNamed(_pointer) [UIImage imageNamed:[UIUtil imageName:_pointer]]
+//#define ImageNamed(_pointer) [UIImage imageNamed:[UIUtil imageName:_pointer]]
+#define ZRImage(name)         [UIImage imageNamed:name]
 
 //BETTER USER THE FIRST TWO WAY, IT PERFORM WELL. 优先使用前两种宏定义,性能高于后面.
 

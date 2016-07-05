@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		6F9C1493FC4B81CBBBA16E4E /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EB508ED8ADB95154FACBBB8 /* libPods.a */; };
+		A32C1C501D2A1A0A007E0E63 /* ZRSegmentView.m in Sources */ = {isa = PBXBuildFile; fileRef = A32C1C4F1D2A1A0A007E0E63 /* ZRSegmentView.m */; };
+		A3BDDB401D2A490B005E35BD /* NSString+ZRString.m in Sources */ = {isa = PBXBuildFile; fileRef = A3BDDB3F1D2A490B005E35BD /* NSString+ZRString.m */; };
+		A3BDDB431D2A6C88005E35BD /* ZRDiscoveryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A3BDDB421D2A6C88005E35BD /* ZRDiscoveryCell.m */; };
+		A3BDDB461D2A90C8005E35BD /* ZRDiscoveryTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A3BDDB451D2A90C8005E35BD /* ZRDiscoveryTableCell.m */; };
+		A3BDDB491D2AA528005E35BD /* ZRColletionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = A3BDDB481D2AA528005E35BD /* ZRColletionViewLayout.m */; };
+		A3BDDB4D1D2B4EA8005E35BD /* ZRIntegralMallFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = A3BDDB4C1D2B4EA8005E35BD /* ZRIntegralMallFrame.m */; };
 		BD1CA8041D2371570005EF92 /* AdView.m in Sources */ = {isa = PBXBuildFile; fileRef = BD1CA8021D2371570005EF92 /* AdView.m */; };
 		BD1CA8051D2371570005EF92 /* placeHoder.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BD1CA8031D2371570005EF92 /* placeHoder.jpg */; };
 		BD1CA8081D2371A70005EF92 /* ZRHomeHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = BD1CA8071D2371A70005EF92 /* ZRHomeHeadView.m */; };
@@ -58,6 +64,18 @@
 		10D08A74F0663F053FB0868F /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		5DD92B5917BE36B7A724ACD8 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		5EB508ED8ADB95154FACBBB8 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		A32C1C4E1D2A1A0A007E0E63 /* ZRSegmentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZRSegmentView.h; sourceTree = "<group>"; };
+		A32C1C4F1D2A1A0A007E0E63 /* ZRSegmentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZRSegmentView.m; sourceTree = "<group>"; };
+		A3BDDB3E1D2A490B005E35BD /* NSString+ZRString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+ZRString.h"; sourceTree = "<group>"; };
+		A3BDDB3F1D2A490B005E35BD /* NSString+ZRString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+ZRString.m"; sourceTree = "<group>"; };
+		A3BDDB411D2A6C88005E35BD /* ZRDiscoveryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZRDiscoveryCell.h; sourceTree = "<group>"; };
+		A3BDDB421D2A6C88005E35BD /* ZRDiscoveryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZRDiscoveryCell.m; sourceTree = "<group>"; };
+		A3BDDB441D2A90C8005E35BD /* ZRDiscoveryTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZRDiscoveryTableCell.h; sourceTree = "<group>"; };
+		A3BDDB451D2A90C8005E35BD /* ZRDiscoveryTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZRDiscoveryTableCell.m; sourceTree = "<group>"; };
+		A3BDDB471D2AA528005E35BD /* ZRColletionViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZRColletionViewLayout.h; sourceTree = "<group>"; };
+		A3BDDB481D2AA528005E35BD /* ZRColletionViewLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZRColletionViewLayout.m; sourceTree = "<group>"; };
+		A3BDDB4B1D2B4EA8005E35BD /* ZRIntegralMallFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZRIntegralMallFrame.h; sourceTree = "<group>"; };
+		A3BDDB4C1D2B4EA8005E35BD /* ZRIntegralMallFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZRIntegralMallFrame.m; sourceTree = "<group>"; };
 		BD1CA8011D2371570005EF92 /* AdView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdView.h; sourceTree = "<group>"; };
 		BD1CA8021D2371570005EF92 /* AdView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdView.m; sourceTree = "<group>"; };
 		BD1CA8031D2371570005EF92 /* placeHoder.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = placeHoder.jpg; sourceTree = "<group>"; };
@@ -154,6 +172,24 @@
 				10D08A74F0663F053FB0868F /* Pods.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		A3BDDB3D1D2A48E6005E35BD /* NSString */ = {
+			isa = PBXGroup;
+			children = (
+				A3BDDB3E1D2A490B005E35BD /* NSString+ZRString.h */,
+				A3BDDB3F1D2A490B005E35BD /* NSString+ZRString.m */,
+			);
+			path = NSString;
+			sourceTree = "<group>";
+		};
+		A3BDDB4A1D2B4DD9005E35BD /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				A3BDDB4B1D2B4EA8005E35BD /* ZRIntegralMallFrame.h */,
+				A3BDDB4C1D2B4EA8005E35BD /* ZRIntegralMallFrame.m */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		BD1CA8001D2371570005EF92 /* AdView */ = {
@@ -313,6 +349,7 @@
 		BDB542C11D1B7E300019C34D /* Categorys */ = {
 			isa = PBXGroup;
 			children = (
+				A3BDDB3D1D2A48E6005E35BD /* NSString */,
 				BD4FEFDB1D23C6EA0040D240 /* UINavigationBar */,
 				BDB542DF1D1BA7CA0019C34D /* UIBarButtonItem */,
 				BDB542C21D1B7E570019C34D /* UIView */,
@@ -332,6 +369,7 @@
 		BDB542C91D1B88E60019C34D /* Discovery(发现) */ = {
 			isa = PBXGroup;
 			children = (
+				A3BDDB4A1D2B4DD9005E35BD /* ViewModel */,
 				BDB542CA1D1B88E60019C34D /* Controller */,
 				BDB542CB1D1B88E60019C34D /* Model */,
 				BDB542CC1D1B88E60019C34D /* Request */,
@@ -353,6 +391,8 @@
 		BDB542CB1D1B88E60019C34D /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				A3BDDB471D2AA528005E35BD /* ZRColletionViewLayout.h */,
+				A3BDDB481D2AA528005E35BD /* ZRColletionViewLayout.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -367,6 +407,12 @@
 		BDB542CD1D1B88E60019C34D /* View */ = {
 			isa = PBXGroup;
 			children = (
+				A32C1C4E1D2A1A0A007E0E63 /* ZRSegmentView.h */,
+				A32C1C4F1D2A1A0A007E0E63 /* ZRSegmentView.m */,
+				A3BDDB411D2A6C88005E35BD /* ZRDiscoveryCell.h */,
+				A3BDDB421D2A6C88005E35BD /* ZRDiscoveryCell.m */,
+				A3BDDB441D2A90C8005E35BD /* ZRDiscoveryTableCell.h */,
+				A3BDDB451D2A90C8005E35BD /* ZRDiscoveryTableCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -684,20 +730,26 @@
 				BDB542E21D1BA7CA0019C34D /* UIBarButtonItem+Item.m in Sources */,
 				BDB542EB1D1BAA750019C34D /* ZRMyPageController.m in Sources */,
 				BDD7A5D81D27B84900373338 /* ZRTableVIewHeadView.m in Sources */,
+				A3BDDB461D2A90C8005E35BD /* ZRDiscoveryTableCell.m in Sources */,
 				BDB542191D1A7A440019C34D /* AppDelegate.m in Sources */,
 				BD4FEFE51D24C01E0040D240 /* ZRHomeCellOne.m in Sources */,
 				BDB542161D1A7A440019C34D /* main.m in Sources */,
 				BD4FEFE11D23D24E0040D240 /* ZRSearchView.m in Sources */,
 				BD1CA8041D2371570005EF92 /* AdView.m in Sources */,
+				A3BDDB4D1D2B4EA8005E35BD /* ZRIntegralMallFrame.m in Sources */,
 				BDB542DE1D1BA5520019C34D /* MyControl.m in Sources */,
+				A3BDDB431D2A6C88005E35BD /* ZRDiscoveryCell.m in Sources */,
 				BD1CA8081D2371A70005EF92 /* ZRHomeHeadView.m in Sources */,
+				A3BDDB401D2A490B005E35BD /* NSString+ZRString.m in Sources */,
 				BDB542C81D1B824A0019C34D /* ZRTabBarButton.m in Sources */,
+				A3BDDB491D2AA528005E35BD /* ZRColletionViewLayout.m in Sources */,
 				BDB542E81D1BAA660019C34D /* ZRDiscoveryController.m in Sources */,
 				BDB542501D1A7F620019C34D /* ZRTabBarViewController.m in Sources */,
 				BDB542561D1A84B70019C34D /* ZRTabBar.m in Sources */,
 				BDD7A5D41D27B76C00373338 /* ZRHomeController.m in Sources */,
 				BD4FEFEA1D24CA3E0040D240 /* ZRHomeCellTwo.m in Sources */,
 				BDB542531D1A81770019C34D /* ZRNavigationController.m in Sources */,
+				A32C1C501D2A1A0A007E0E63 /* ZRSegmentView.m in Sources */,
 				BDB542DA1D1BA3C60019C34D /* ZRBaseViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -835,7 +887,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/Tools/ZRPrefixHeader.pch";
 				INFOPLIST_FILE = zhiruProduct/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = weijianan.zhiruProduct;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -850,7 +902,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/Tools/ZRPrefixHeader.pch";
 				INFOPLIST_FILE = zhiruProduct/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = weijianan.zhiruProduct;
 				PRODUCT_NAME = "$(TARGET_NAME)";
