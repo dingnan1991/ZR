@@ -30,7 +30,7 @@
 //        self.edgesForExtendedLayout = UIRectEdgeNone;
 //        
 //    }
-//    
+//
     [self createLeftBtn];
     self.view.backgroundColor = [UIColor whiteColor];
 }

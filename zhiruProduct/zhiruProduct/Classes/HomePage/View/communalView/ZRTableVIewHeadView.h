@@ -14,7 +14,9 @@
  *  头部视图图片 url 集合
  */
 @property (nonatomic , strong)NSArray * titleImgArr;
-
+/**
+ *  头部视图图片点击回调
+ */
 @property (nonatomic , copy) void(^clickImgView)(NSInteger index);
 
 /**

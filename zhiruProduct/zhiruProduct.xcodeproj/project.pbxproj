@@ -35,6 +35,8 @@
 		BDB542EB1D1BAA750019C34D /* ZRMyPageController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDB542EA1D1BAA750019C34D /* ZRMyPageController.m */; };
 		BDD7A5D41D27B76C00373338 /* ZRHomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD7A5D31D27B76C00373338 /* ZRHomeController.m */; };
 		BDD7A5D81D27B84900373338 /* ZRTableVIewHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD7A5D71D27B84900373338 /* ZRTableVIewHeadView.m */; };
+		BDD7A5DE1D2B3E3100373338 /* ZRQueryView.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD7A5DD1D2B3E3100373338 /* ZRQueryView.m */; };
+		BDD7A5E21D2B436100373338 /* ZRLookForTasteController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD7A5E11D2B436100373338 /* ZRLookForTasteController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -111,6 +113,10 @@
 		BDD7A5D31D27B76C00373338 /* ZRHomeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZRHomeController.m; sourceTree = "<group>"; };
 		BDD7A5D61D27B84900373338 /* ZRTableVIewHeadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZRTableVIewHeadView.h; sourceTree = "<group>"; };
 		BDD7A5D71D27B84900373338 /* ZRTableVIewHeadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZRTableVIewHeadView.m; sourceTree = "<group>"; };
+		BDD7A5DC1D2B3E3100373338 /* ZRQueryView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZRQueryView.h; sourceTree = "<group>"; };
+		BDD7A5DD1D2B3E3100373338 /* ZRQueryView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZRQueryView.m; sourceTree = "<group>"; };
+		BDD7A5E01D2B436100373338 /* ZRLookForTasteController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZRLookForTasteController.h; sourceTree = "<group>"; };
+		BDD7A5E11D2B436100373338 /* ZRLookForTasteController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZRLookForTasteController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -386,6 +392,7 @@
 		BDB542CF1D1B88E60019C34D /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				BDD7A5DF1D2B433500373338 /*  lookForTaste(寻味) */,
 				BDD7A5D21D27B76B00373338 /* ZRHomeController.h */,
 				BDD7A5D31D27B76C00373338 /* ZRHomeController.m */,
 			);
@@ -490,9 +497,21 @@
 			children = (
 				BDD7A5D61D27B84900373338 /* ZRTableVIewHeadView.h */,
 				BDD7A5D71D27B84900373338 /* ZRTableVIewHeadView.m */,
+				BDD7A5DC1D2B3E3100373338 /* ZRQueryView.h */,
+				BDD7A5DD1D2B3E3100373338 /* ZRQueryView.m */,
 			);
 			name = "communalView(公用视图)";
 			path = communalView;
+			sourceTree = "<group>";
+		};
+		BDD7A5DF1D2B433500373338 /*  lookForTaste(寻味) */ = {
+			isa = PBXGroup;
+			children = (
+				BDD7A5E01D2B436100373338 /* ZRLookForTasteController.h */,
+				BDD7A5E11D2B436100373338 /* ZRLookForTasteController.m */,
+			);
+			name = " lookForTaste(寻味)";
+			path = " lookForTaste";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -689,12 +708,14 @@
 				BDB542161D1A7A440019C34D /* main.m in Sources */,
 				BD4FEFE11D23D24E0040D240 /* ZRSearchView.m in Sources */,
 				BD1CA8041D2371570005EF92 /* AdView.m in Sources */,
+				BDD7A5E21D2B436100373338 /* ZRLookForTasteController.m in Sources */,
 				BDB542DE1D1BA5520019C34D /* MyControl.m in Sources */,
 				BD1CA8081D2371A70005EF92 /* ZRHomeHeadView.m in Sources */,
 				BDB542C81D1B824A0019C34D /* ZRTabBarButton.m in Sources */,
 				BDB542E81D1BAA660019C34D /* ZRDiscoveryController.m in Sources */,
 				BDB542501D1A7F620019C34D /* ZRTabBarViewController.m in Sources */,
 				BDB542561D1A84B70019C34D /* ZRTabBar.m in Sources */,
+				BDD7A5DE1D2B3E3100373338 /* ZRQueryView.m in Sources */,
 				BDD7A5D41D27B76C00373338 /* ZRHomeController.m in Sources */,
 				BD4FEFEA1D24CA3E0040D240 /* ZRHomeCellTwo.m in Sources */,
 				BDB542531D1A81770019C34D /* ZRNavigationController.m in Sources */,
