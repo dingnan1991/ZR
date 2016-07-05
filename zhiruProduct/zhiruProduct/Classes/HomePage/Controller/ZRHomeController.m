@@ -36,7 +36,6 @@
         [self.view addSubview:homeTableView];
         _homeTableView = homeTableView;
         homeTableView.backgroundColor = [UIColor clearColor];
-//        homeTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
         homeTableView.rowHeight = UITableViewAutomaticDimension;
         homeTableView.estimatedRowHeight = 120.0;
         

@@ -96,12 +96,17 @@ static NSString *ID = @"ID";
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    NSDictionary *dic = self.dataArray[section];
-    if (section == 0) {
-        return 1;
-    }else
+    if (self.cellIndex == index0) {
+        NSDictionary *dic = self.dataArray[section];
+        if (section == 0) {
+            return 1;
+        }else
+            
+            return [[dic allValues][0] count];
         
-        return [[dic allValues][0] count];
+    }else
+        return [self.dataArray[section] count];
+    
 }
 
 
