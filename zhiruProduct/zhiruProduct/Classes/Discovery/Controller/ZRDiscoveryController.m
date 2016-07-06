@@ -10,7 +10,7 @@
 #import "ZRSegmentView.h"
 #import "ZRDiscoveryCell.h"
 
-@interface ZRDiscoveryController ()<ZRSegmentViewDelegate>
+@interface ZRDiscoveryController ()<ZRSegmentViewDelegate, ZRDiscoveryCellDelegate>
 
 @property (nonatomic, strong)ZRSegmentView *segmentView;
 
@@ -33,15 +33,11 @@ static NSString *ID = @"cell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    self.collectionView.backgroundColor =  [UIColor greenColor];
     [self.collectionView registerClass:[ZRDiscoveryCell class] forCellWithReuseIdentifier:ID];
-    
     self.collectionView.pagingEnabled = YES;
     self.collectionView.bounces = NO;
     self.collectionView.showsHorizontalScrollIndicator = NO;
-    self.collectionView.scrollEnabled = NO;
-    
+    //self.collectionView.scrollEnabled = NO;
     //setUp TitleView  For NavigationBar
     [self setUpTitleView];
     
@@ -99,6 +95,17 @@ static NSString *ID = @"cell";
 }
 
 
+#pragma mark - UIScrollView Delegate
+
+-(void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
+{
+    int page = scrollView.contentOffset.x/SCREEN_WIDTH;
+    UIButton *button = [_segmentView viewWithTag:(10+page)];
+    [_segmentView buttonPressed:button];
+    
+}
+
+
 #pragma mark - UICollectionView Delegate
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
     return 3;
@@ -109,9 +116,9 @@ static NSString *ID = @"cell";
     
     
     ZRDiscoveryCell * cell = [collectionView dequeueReusableCellWithReuseIdentifier:ID forIndexPath:indexPath];
-    
+    cell.delegate = self;
     if (indexPath.item == 0) {
-        cell.backgroundColor = [UIColor greenColor];
+        //cell.backgroundColor = [UIColor greenColor];
         cell.cellIndex  = index0;
         NSDictionary *dic1 = @{@"美食":@"dilanhui",
                               @"丽人":@"dilanhui",
@@ -144,6 +151,31 @@ static NSString *ID = @"cell";
     
     
     return cell;
+}
+
+
+#pragma mark - ZRDiscoveryCellDelegate methods
+/**
+ *  推荐----查看全部点击事件
+ *
+ *  @param cell
+ *  @param titleStr 
+ */
+-(void)recommendSeeAll:(ZRDiscoveryCell *)cell WithTitle:(NSString *)titleStr
+{
+    if ([titleStr isEqualToString:@"热门美食"]) {
+        
+    }else if ([titleStr isEqualToString:@"热门丽人"]){
+        
+    }else if ([titleStr isEqualToString:@"热门娱乐"]){
+        
+    }else if ([titleStr isEqualToString:@"热门旅行"]){
+        
+    }else if ([titleStr isEqualToString:@"热门购物"]){
+        
+    }else if ([titleStr isEqualToString:@"热门生活"]){
+        
+    }
 }
 
 

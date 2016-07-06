@@ -40,25 +40,23 @@
 {
     _dic = dic;
     
-    self.layer.borderColor = [UIColor blackColor].CGColor;
-    self.layer.borderWidth = 1;
-
-    
     
     
 }
 
 #pragma mark - init methods
-+(ZRDiscoveryTableCell *)cellWithTableView:(UITableView *)tableView;
++(ZRDiscoveryTableCell *)cellWithTableView:(UITableView *)tableView withIndexPath:(NSIndexPath *)indexPath;
 {
     static NSString *cellID = @"cellID";
     ZRDiscoveryTableCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID];
     if (cell == nil) {
         cell = [[ZRDiscoveryTableCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellID];
-    }else{
+    }
+    else{
         for (UIView *view in cell.subviews) {
             [view removeFromSuperview];
         }
+       
     }
     return cell;
 }
@@ -81,43 +79,62 @@
  */
 - (void)recommendBtnClick:(UIButton *)sender
 {
-    switch (sender.tag) {
-        case CategoryButtonTag:
-        {
-            
-        }
-            break;
-        case CategoryButtonTag+1:
-        {
-            
-        }
-            break;
-        case CategoryButtonTag+2:
-        {
-            
-        }
-            break;
-        case CategoryButtonTag+3:
-        {
-            
-        }
-            break;
-        case CategoryButtonTag+4:
-        {
-            
-        }
-            break;
-        case CategoryButtonTag+5:
-        {
-            
-        }
-            break;
-            
-        default:
-            break;
+    if ([self.delegate respondsToSelector:@selector(categoriesClick:withCell:)]) {
+        [self.delegate categoriesClick:sender.tag withCell:self];
     }
     
+    
+       
 }
+
+
+
+#pragma mark - drawRect
+-(void)drawRect:(CGRect)rect
+{
+    if (_dic) {
+        //绘制图片
+        //self.imgView.image = ZRImage(@"hanbao");
+        ZRImage(@"hanbao");
+        UIImage* myImageObj = ZRImage(@"hanbao");
+        CGFloat x = 15*SCREEN_WIDTH/375;
+        CGFloat y = 7.5*SCREEN_HEIGHT/667;
+        CGFloat width = 180*SCREEN_WIDTH/375;
+        CGFloat height = 110*SCREEN_HEIGHT/667;
+        [self drawImage:myImageObj Rect:CGRectMake(x, y, width, height)];
+        //名字
+        UIFont *font1 = [UIFont systemFontOfSize:14];
+        NSString *str1 = @"双人烤肉套餐(烤肉饭)";
+        NSString *str2 = @"已售2000";
+        NSString *str3 = @"$ 200";
+        
+        CGSize size1 = [self drawWithStr:str1 Font:font1 Color:[UIColor blackColor] Point:CGPointMake(x+width+10, y+20)];
+        [self drawWithStr:str2 Font:font1 Color:[UIColor blackColor] Point:CGPointMake(x+width+10, y+35+size1.height)];
+        CGSize size3 = [self drawWithStr:str3 Font:[UIFont systemFontOfSize:16] Color:[UIColor redColor] Point:CGPointMake(x+width+10, y+50+size1.height*2)];
+      
+        
+#warning 之后加一张图片
+        CGContextRef context = UIGraphicsGetCurrentContext();
+        CGContextMoveToPoint(context, x+width+30+size3.width, y+45+size1.height*2);
+        CGContextAddLineToPoint(context, x+width+30+size3.width+20, y+45+size1.height*2);
+        CGContextAddLineToPoint(context, x+width+30+size3.width+20, y+45+size1.height*2+20);
+        CGContextAddLineToPoint(context, x+width+30+size3.width, y+45+size1.height*2+20);
+        CGContextAddLineToPoint(context, x+width+30+size3.width, y+45+size1.height*2);
+        CGContextSetFillColorWithColor(context, [UIColor redColor].CGColor);
+        CGContextFillPath(context);
+
+        
+        
+        
+        
+        
+    }
+   
+}
+
+
+
+
 
 
 

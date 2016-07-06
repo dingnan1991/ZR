@@ -9,12 +9,15 @@
 #import "ZRDiscoveryCell.h"
 #import "ZRDiscoveryTableCell.h"
 #import "ZRColletionViewLayout.h"
+#import "ZRRecommentHeader.h"
 
-@interface ZRDiscoveryCell ()<UITableViewDataSource, UITableViewDelegate, UICollectionViewDataSource, UICollectionViewDelegate>
+@interface ZRDiscoveryCell ()<UITableViewDataSource, UITableViewDelegate, UICollectionViewDataSource, UICollectionViewDelegate, ZRDiscoveryTableCellDelegate>
 
 @property (nonatomic, strong) UITableView *tableView;
 
 @property (nonatomic, strong) UICollectionView *collectionView;
+
+@property (nonatomic, strong) ZRRecommentHeader *headerView;
 
 @end
 
@@ -28,8 +31,11 @@ static NSString *ID = @"ID";
         _tableView = [[UITableView alloc] initWithFrame:self.bounds style:UITableViewStyleGrouped];
         _tableView.delegate = self;
         _tableView.dataSource = self;
+        _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+        _tableView.backgroundView = nil;
         _tableView.backgroundColor = RGBCOLOR(240, 240, 240);
         [self addSubview:_tableView];
+        [self showFloatedUpButton];
         
     }
     return _tableView;
@@ -78,8 +84,11 @@ static NSString *ID = @"ID";
     UICollectionViewCell *cell = [self.collectionView dequeueReusableCellWithReuseIdentifier:ID forIndexPath:indexPath];
     
     cell.backgroundColor = [UIColor colorWithRed:arc4random()%255/255.0 green:arc4random()%255/255.0 blue:arc4random()%255/255.0 alpha:1];
+    cell.backgroundColor = RGBCOLOR(240, 240, 240);
     cell.layer.borderColor = [UIColor redColor].CGColor;
     cell.layer.borderWidth = 1;
+
+    
     return cell;
 }
 
@@ -113,12 +122,14 @@ static NSString *ID = @"ID";
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    ZRDiscoveryTableCell *cell = [ZRDiscoveryTableCell cellWithTableView:self.tableView];
-    
+    ZRDiscoveryTableCell *cell = [ZRDiscoveryTableCell cellWithTableView:self.tableView withIndexPath:indexPath];
+    cell.delegate = self;
     if (self.cellIndex == index0) {
         if (indexPath.section == 0) {
             cell.categoryDic = self.dataArray[0];
+            cell.dic = nil;
         }else{
+            //cell.categoryDic = nil;
             cell.dic = self.dataArray[indexPath.section];
         }
         
@@ -128,6 +139,10 @@ static NSString *ID = @"ID";
         
     }
     
+//    cell.layer.borderColor = [UIColor grayColor].CGColor;
+//    cell.layer.borderWidth = 1;
+    
+    
     return cell;
     
 }
@@ -135,33 +150,53 @@ static NSString *ID = @"ID";
 
 -(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
-    UIView *view = nil;
     if (self.cellIndex == index0 && section != 0) {
-        view = [[UIView alloc] initWithFrame:CGRectMake(15, 15, SCREEN_WIDTH-30, 105)];
-        //view.backgroundColor = [UIColor grayColor];
-        UIImageView *imgView = [[UIImageView alloc] init];
-        imgView.backgroundColor = [UIColor redColor];
-//        [imgView mas_makeConstraints:^(MASConstraintMaker *make) {
-//            //make.edges.equalTo(view).with.insets(UIEdgeInsetsMake(15, 15, 15, 15));
-//            make.left.equalTo(@15);
-//            
-//        }];
+        _headerView = [[ZRRecommentHeader alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH-30, 105)];
+        NSDictionary *dic = self.dataArray[section];
+        _headerView.titleStr = dic.allKeys.firstObject;
         
-        [view addSubview:imgView];
+        //添加手势
+        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(sellAllTap:)];
+        [_headerView addGestureRecognizer:tap];
         
-        return view;
+        return _headerView;
     }else
-        return view;
+        return _headerView;
     
+}
+
+
+
+-(UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
+{
+    UIView *view = [[UIView alloc] init];
+    view.backgroundColor = RGBCOLOR(240, 240, 240);
+    
+    UIView *lineView = [[UIView alloc] init];
+    lineView.backgroundColor = RGBCOLOR(173, 173, 173);
+    [view addSubview:lineView];
+    [lineView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(@0);
+        make.left.equalTo(@0);
+        make.right.equalTo(@0);
+        make.height.equalTo(@1);
+        
+    }];
+    
+    return view;
 }
 
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (self.cellIndex == index0) {
-        return 100;
+    if (self.cellIndex == index0){
+        if (indexPath.section == 0) {
+            return 100;
+        }else
+            return 125;
     }else
         return 150;
+    
 }
 
 
@@ -172,7 +207,115 @@ static NSString *ID = @"ID";
         return 105;
     }else
         return 0.1;
+    
+    
+   
 }
+
+#pragma mark - ZRDiscoveryTableCellDelegate method
+/**
+ *  推荐：分类点击事件
+ *
+ *  @param sender 美食、丽人、娱乐、旅行、购物、生活
+ */
+-(void)categoriesClick:(NSInteger)btnTag withCell:(ZRDiscoveryTableCell *)tableCell
+{
+    
+      switch (btnTag) {
+        case 100:
+        {
+            
+            CGRect rect = [self.tableView rectForFooterInSection:0];
+            [self.tableView setContentOffset:CGPointMake(0,CGRectGetMaxY(rect)) animated:YES];
+            
+        }
+            break;
+        case 100+1:
+        {
+            CGRect rect = [self.tableView rectForFooterInSection:1];
+            [self.tableView setContentOffset:CGPointMake(0,CGRectGetMaxY(rect)) animated:YES];
+            
+        }
+            break;
+        case 100+2:
+        {
+            CGRect rect = [self.tableView rectForFooterInSection:2];
+            [self.tableView setContentOffset:CGPointMake(0,CGRectGetMaxY(rect)) animated:YES];
+        }
+            break;
+        case 100+3:
+        {
+            CGRect rect = [self.tableView rectForFooterInSection:3];
+            [self.tableView setContentOffset:CGPointMake(0,CGRectGetMaxY(rect)) animated:YES];
+        }
+            break;
+        case 100+4:
+        {
+            CGRect rect = [self.tableView rectForFooterInSection:4];
+            [self.tableView setContentOffset:CGPointMake(0,CGRectGetMaxY(rect)) animated:YES];
+        }
+            break;
+        case 100+5:
+        {
+            CGRect rect = [self.tableView rectForFooterInSection:5];
+            [self.tableView setContentOffset:CGPointMake(0,CGRectGetMaxY(rect)) animated:YES];
+        }
+            break;
+            
+        default:
+            break;
+    }
+
+}
+
+
+#pragma mark - 显示浮动向上的按钮
+- (void)showFloatedUpButton
+{
+    UIWindow *window = [UIApplication sharedApplication].keyWindow;
+    CGFloat width = 40*SCREEN_WIDTH/375;
+    CGFloat x = SCREEN_WIDTH-width-15;
+    CGFloat y = SCREEN_HEIGHT-15-49-width;
+    UIButton *upButton = [MyControl createButtonWithFrame:CGRectMake(x, y, width, width) ImageName:@"" Target:self Action:@selector(upButtonClick:) Title:nil];
+    
+#warning 暂无图片，先设置一个颜色
+    upButton.backgroundColor = [UIColor blackColor];
+    
+    [window addSubview:upButton];
+    
+}
+
+
+#pragma mark - click methods
+/**
+ *  浮动向上的按钮点击事件
+ *
+ *  @param sender
+ */
+- (void)upButtonClick:(UIButton *)sender
+{
+    
+    [self.tableView setContentOffset:CGPointMake(0, 0) animated:YES];
+}
+
+/**
+ *  推荐：查看全部
+ *
+ *  @param ges 手势
+ */
+- (void)sellAllTap:(UIGestureRecognizer *)ges
+{
+    if ([self.delegate respondsToSelector:@selector(recommendSeeAll:WithTitle:)]) {
+        [self.delegate recommendSeeAll:self WithTitle:_headerView.titleStr];
+    }
+}
+
+
+
+//- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
+//{
+//    return 0.1;
+//}
 
 
 @end

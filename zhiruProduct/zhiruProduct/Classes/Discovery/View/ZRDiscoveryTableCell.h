@@ -7,6 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+@class ZRDiscoveryTableCell;
+@protocol ZRDiscoveryTableCellDelegate <NSObject>
+
+- (void)categoriesClick:(NSInteger)btnTag withCell:(ZRDiscoveryTableCell *)tableCell;
+
+@end
 
 @interface ZRDiscoveryTableCell : UITableViewCell
 
@@ -14,7 +20,15 @@
 
 @property (nonatomic, strong) NSDictionary *dic;
 
-+(ZRDiscoveryTableCell *)cellWithTableView:(UITableView *)tableView;
+
+@property (nonatomic, strong) UIImageView *imgView;
+
+
+
+
+@property (nonatomic, weak) id<ZRDiscoveryTableCellDelegate> delegate;
+
++(ZRDiscoveryTableCell *)cellWithTableView:(UITableView *)tableView withIndexPath:(NSIndexPath *)indexPath;
 
 
 @end

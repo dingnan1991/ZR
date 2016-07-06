@@ -7,13 +7,19 @@
 //
 
 #import <UIKit/UIKit.h>
-
+@class ZRDiscoveryCell;
 typedef NS_ENUM(NSInteger, UICollectionCellIndex) {
     index0,
     index1,
     index2
 };
 
+
+@protocol ZRDiscoveryCellDelegate <NSObject>
+
+- (void)recommendSeeAll:(ZRDiscoveryCell *)cell WithTitle:(NSString *)titleStr;
+
+@end
 
 @interface ZRDiscoveryCell : UICollectionViewCell
 
@@ -23,5 +29,7 @@ typedef NS_ENUM(NSInteger, UICollectionCellIndex) {
 @property (nonatomic, strong) NSArray *dataArray;
 
 @property (nonatomic, strong) NSArray *collectionArray;
+
+@property (nonatomic, weak) id<ZRDiscoveryCellDelegate> delegate;
 
 @end
