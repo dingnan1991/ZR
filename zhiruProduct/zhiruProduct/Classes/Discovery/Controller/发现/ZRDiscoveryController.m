@@ -9,10 +9,12 @@
 #import "ZRDiscoveryController.h"
 #import "ZRSegmentView.h"
 #import "ZRDiscoveryCell.h"
+#import "ZRProductDetalController.h"
+
 
 @interface ZRDiscoveryController ()<ZRSegmentViewDelegate, ZRDiscoveryCellDelegate>
 
-@property (nonatomic, strong)ZRSegmentView *segmentView;
+@property (nonatomic, strong) ZRSegmentView *segmentView;
 
 @end
 
@@ -37,6 +39,7 @@ static NSString *ID = @"cell";
     self.collectionView.pagingEnabled = YES;
     self.collectionView.bounces = NO;
     self.collectionView.showsHorizontalScrollIndicator = NO;
+    
     //self.collectionView.scrollEnabled = NO;
     //setUp TitleView  For NavigationBar
     [self setUpTitleView];
@@ -63,6 +66,8 @@ static NSString *ID = @"cell";
     _segmentView.textFont = [UIFont systemFontOfSize:16];
     [_segmentView loadTitleArray:arrar];
     self.navigationItem.titleView = _segmentView;
+    //默认选中积分商城
+     [_segmentView buttonPressed:[_segmentView viewWithTag:11]];
     
 }
 
@@ -90,8 +95,10 @@ static NSString *ID = @"cell";
 #pragma mark - ZRSegmentViewDelegate methods
 -(void)segmentView:(ZRSegmentView *)segmentView index:(NSInteger)index
 {
+    
     NSIndexPath *indexPath = [NSIndexPath indexPathForRow:index inSection:0];
     [self.collectionView scrollToItemAtIndexPath:indexPath atScrollPosition:UICollectionViewScrollPositionNone animated:YES];
+   
 }
 
 
@@ -112,10 +119,7 @@ static NSString *ID = @"cell";
 }
 
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
-    
-    
-    
-    ZRDiscoveryCell * cell = [collectionView dequeueReusableCellWithReuseIdentifier:ID forIndexPath:indexPath];
+    ZRDiscoveryCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:ID forIndexPath:indexPath];
     cell.delegate = self;
     if (indexPath.item == 0) {
         //cell.backgroundColor = [UIColor greenColor];
@@ -134,18 +138,31 @@ static NSString *ID = @"cell";
         NSDictionary *dic7 = @{@"热门生活":@[@"双人烤肉套餐",@"双人烤肉套餐",@"双人烤肉套餐"]};
         
         cell.dataArray = @[dic1,dic2,dic3,dic4,dic5,dic6,dic7];
+        [cell.upButton setHidden:NO];
         
     }else if (indexPath.item == 1){
         
-        cell.backgroundColor = [UIColor redColor];
+        //cell.backgroundColor = [UIColor redColor];
         cell.cellIndex = index1;
         cell.collectionArray = @[@"1",@"2"];
+        
+        //cell.upButton = nil;
+        if (cell.upButton) {
+            [[UIApplication sharedApplication].keyWindow.subviews[[UIApplication sharedApplication].keyWindow.subviews.count-1] setHidden:YES];
+        }
+        
+        
         
     }else{
        
         cell.backgroundColor = [UIColor grayColor];
         cell.cellIndex = index2;
-        cell.dataArray = @[@[@"1"],@[@"2"],@[@"3"],@[@"4"]];
+        cell.dataArray = @[@[ZRImage(@"tu-0"),@"双人烤肉套餐",@"$ 200",@"300m"],@[ZRImage(@"tu-0"),@"双人烤肉套餐",@"$ 200",@"300m"],@[ZRImage(@"tu-0"),@"双人烤肉套餐",@"$ 200",@"300m"],@[ZRImage(@"tu-0"),@"双人烤肉套餐",@"$ 200",@"300m"],@[ZRImage(@"tu-0"),@"双人烤肉套餐",@"$ 200",@"300m"],@[ZRImage(@"tu-0"),@"双人烤肉套餐",@"$ 200",@"300m"],@[ZRImage(@"tu-0"),@"双人烤肉套餐",@"$ 200",@"300m"]];
+        
+        if (cell.upButton) {
+            [[UIApplication sharedApplication].keyWindow.subviews[[UIApplication sharedApplication].keyWindow.subviews.count-1] setHidden:YES];
+        }
+        
         
     }
     
@@ -176,6 +193,18 @@ static NSString *ID = @"cell";
     }else if ([titleStr isEqualToString:@"热门生活"]){
         
     }
+}
+
+/**
+ *  积分商城跳转到商品详情
+ *
+ *  @param cell
+ *  @param index 
+ */
+- (void)integralMallClickToProductDetail:(ZRDiscoveryCell *)cell WithIndex:(NSInteger)index
+{
+    ZRProductDetalController *productDetailCtl = [[ZRProductDetalController alloc] init];
+    [self.navigationController pushViewController:productDetailCtl animated:YES];
 }
 
 

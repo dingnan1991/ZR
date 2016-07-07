@@ -28,7 +28,26 @@
  */
 - (void)drawImage:(UIImage *)image Rect:(CGRect)rect;
 
+/**
+ *  绘制直线
+ *
+ *  @param startPoint 起点
+ *  @param endPoint   终点
+ *  @param color      颜色
+ */
+- (void)drawLineStartPoint:(CGPoint)startPoint endPoint:(CGPoint)endPoint Color:(UIColor *)color;
 
 
+/**
+ *  绘制长方形
+ *
+ *  @param point1 左上角
+ *  @param point2 右上角
+ *  @param point3 右下角
+ *  @param point4 左下角
+ *  @param color  背景色
+ *  @param alpha  透明度
+ */
+- (void)drawRectangleWithPoint1:(CGPoint)point1 Point2:(CGPoint)point2 Point3:(CGPoint)point3 Point4:(CGPoint)point4 Color:(CGFloat)r G:(CGFloat)g B:(CGFloat)b Alpha:(float)alpha;
 
 @end

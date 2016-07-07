@@ -10,9 +10,9 @@
 
 @interface ZRColletionViewLayout : UICollectionViewFlowLayout
 
-//有多少个item
-@property (nonatomic, assign) int itemCount;
-//自定义布局配置数组
-@property (nonatomic, strong) NSMutableArray *attributeArray;
+////有多少个item
+//@property (nonatomic, assign) int itemCount;
+////自定义布局配置数组
+//@property (nonatomic, strong) NSMutableArray *attributeArray;
 
 @end

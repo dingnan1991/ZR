@@ -20,6 +20,8 @@
 
 @property (nonatomic, strong) NSDictionary *dic;
 
+@property (nonatomic, strong) NSArray *latestProductArr;
+
 
 @property (nonatomic, strong) UIImageView *imgView;
 

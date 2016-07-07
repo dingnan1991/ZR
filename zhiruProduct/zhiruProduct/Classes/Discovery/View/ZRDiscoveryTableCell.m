@@ -40,6 +40,14 @@
 {
     _dic = dic;
     
+}
+
+
+-(void)setLatestProductArr:(NSArray *)latestProductArr
+{
+    _latestProductArr = latestProductArr;
+    
+    
     
     
 }
@@ -122,9 +130,16 @@
         CGContextAddLineToPoint(context, x+width+30+size3.width, y+45+size1.height*2);
         CGContextSetFillColorWithColor(context, [UIColor redColor].CGColor);
         CGContextFillPath(context);
-
+    }else if(_latestProductArr){
+        //绘制图片
+        [self drawImage:_latestProductArr[0] Rect:CGRectMake(0, 0, SCREEN_WIDTH, self.height)];
         
+        [self drawRectangleWithPoint1:CGPointMake(0, 0) Point2:CGPointMake(SCREEN_WIDTH, 0) Point3:CGPointMake(SCREEN_WIDTH, self.height) Point4:CGPointMake(0, self.height) Color:0 G:0 B:0 Alpha:0.5];
         
+        [self drawWithStr:_latestProductArr[1] Font:[UIFont systemFontOfSize:16] Color:[UIColor whiteColor] Point:CGPointMake(120, 40)];
+        [self drawWithStr:_latestProductArr[2] Font:[UIFont systemFontOfSize:16] Color:[UIColor whiteColor] Point:CGPointMake(140, 80)];
+        
+        [self drawWithStr:_latestProductArr[3] Font:[UIFont systemFontOfSize:16] Color:[UIColor whiteColor] Point:CGPointMake(140, 120)];
         
         
         

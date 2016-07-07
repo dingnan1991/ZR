@@ -19,6 +19,8 @@ typedef NS_ENUM(NSInteger, UICollectionCellIndex) {
 
 - (void)recommendSeeAll:(ZRDiscoveryCell *)cell WithTitle:(NSString *)titleStr;
 
+- (void)integralMallClickToProductDetail:(ZRDiscoveryCell *)cell WithIndex:(NSInteger)index;
+
 @end
 
 @interface ZRDiscoveryCell : UICollectionViewCell
@@ -31,5 +33,9 @@ typedef NS_ENUM(NSInteger, UICollectionCellIndex) {
 @property (nonatomic, strong) NSArray *collectionArray;
 
 @property (nonatomic, weak) id<ZRDiscoveryCellDelegate> delegate;
+
+//悬浮向上的按钮
+@property (nonatomic, strong) UIButton *upButton;
+
 
 @end

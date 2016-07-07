@@ -11,6 +11,8 @@
 #import "ZRColletionViewLayout.h"
 #import "ZRRecommentHeader.h"
 
+#import "ZRIntegralMallCell.h"
+
 @interface ZRDiscoveryCell ()<UITableViewDataSource, UITableViewDelegate, UICollectionViewDataSource, UICollectionViewDelegate, ZRDiscoveryTableCellDelegate>
 
 @property (nonatomic, strong) UITableView *tableView;
@@ -19,12 +21,15 @@
 
 @property (nonatomic, strong) ZRRecommentHeader *headerView;
 
+@property (nonatomic, strong) NSMutableArray *dataArr;
+
+
 @end
 
 static NSString *ID = @"ID";
 @implementation ZRDiscoveryCell
 
-
+#pragma mark - 懒加载
 -(UITableView *)tableView
 {
     if (!_tableView) {
@@ -35,7 +40,6 @@ static NSString *ID = @"ID";
         _tableView.backgroundView = nil;
         _tableView.backgroundColor = RGBCOLOR(240, 240, 240);
         [self addSubview:_tableView];
-        [self showFloatedUpButton];
         
     }
     return _tableView;
@@ -47,19 +51,43 @@ static NSString *ID = @"ID";
         //流水布局
         ZRColletionViewLayout *layout = [[ZRColletionViewLayout alloc] init];
         layout.scrollDirection = UICollectionViewScrollDirectionVertical;
-        layout.itemCount = 100;
         _collectionView = [[UICollectionView alloc] initWithFrame:self.bounds collectionViewLayout:layout];
-        [_collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:ID];
+        [_collectionView registerClass:[ZRIntegralMallCell class] forCellWithReuseIdentifier:ID];
+        _collectionView.backgroundColor = RGBCOLOR(240, 240, 240);
         _collectionView.delegate = self;
         _collectionView.dataSource = self;
+        
        
     }
     return _collectionView;
 }
 
+/**
+ *  悬浮向上的按钮
+ *
+ *  @return 
+ */
+-(UIButton *)upButton
+{
+    if (!_upButton) {
+        UIWindow *myWindow = [UIApplication sharedApplication].keyWindow;
+        CGFloat width = 40*SCREEN_WIDTH/375;
+        CGFloat x = SCREEN_WIDTH-width-15;
+        CGFloat y = SCREEN_HEIGHT-15-49-width;
+        _upButton = [MyControl createButtonWithFrame:CGRectMake(x, y, width, width) ImageName:@"" Target:self Action:@selector(upButtonClick:) Title:nil];
+#warning 暂无图片，先设置一个颜色
+        _upButton.backgroundColor = [UIColor blackColor];
+        [myWindow addSubview:_upButton];
+        
+    }
+    return _upButton;
+}
+
 -(void)setDataArray:(NSArray *)dataArray
 {
     _dataArray = dataArray;
+    
+    
     
     [self.tableView reloadData];
     
@@ -72,7 +100,32 @@ static NSString *ID = @"ID";
     [self addSubview:self.collectionView];
 }
 
-#pragma mark - UICollectionViewDataSource
+/**
+ *  积分商城数据
+ *
+ *  @return
+ */
+-(NSMutableArray *)dataArr
+{
+    if (!_dataArr) {
+        
+        _dataArr = [NSMutableArray array];
+        for (int i=0; i<100; i++) {
+            if (i==0) {
+                [_dataArr addObject:@[@"titleImage"]];
+            }else{
+                NSArray *arr = @[@"tu-0",@"[牙膏中的爱马仕]意大利",@"Marvis玛尔斯25ml*7支套装",@"100"];
+                [_dataArr addObject:arr];
+            }
+            
+        }
+        
+    }
+    return _dataArr;
+}
+
+
+#pragma mark - UICollectionViewDataSource   
 
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
@@ -81,15 +134,25 @@ static NSString *ID = @"ID";
 
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    UICollectionViewCell *cell = [self.collectionView dequeueReusableCellWithReuseIdentifier:ID forIndexPath:indexPath];
+    ZRIntegralMallCell *cell = [self.collectionView dequeueReusableCellWithReuseIdentifier:ID forIndexPath:indexPath];
+    cell.backgroundColor = [UIColor whiteColor];
+    //cell.backgroundColor = [UIColor colorWithRed:arc4random()%255/255.0 green:arc4random()%255/255.0 blue:arc4random()%255/255.0 alpha:1];
     
-    cell.backgroundColor = [UIColor colorWithRed:arc4random()%255/255.0 green:arc4random()%255/255.0 blue:arc4random()%255/255.0 alpha:1];
-    cell.backgroundColor = RGBCOLOR(240, 240, 240);
-    cell.layer.borderColor = [UIColor redColor].CGColor;
-    cell.layer.borderWidth = 1;
-
-    
+    cell.integralArr = self.dataArr[indexPath.item];
+   
     return cell;
+}
+
+
+-(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (indexPath.item != 0) {
+        if ([self.delegate respondsToSelector:@selector(integralMallClickToProductDetail:WithIndex:)]) {
+            [self.delegate integralMallClickToProductDetail:self WithIndex:indexPath.item];
+        }
+        
+    }
+    
 }
 
 
@@ -98,7 +161,11 @@ static NSString *ID = @"ID";
 #pragma mark - UITableViewDataSource methods
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return self.dataArray.count;
+    if (self.cellIndex == index0) {
+       return self.dataArray.count;
+    }else
+        return 1;
+    
     
 }
 
@@ -114,7 +181,7 @@ static NSString *ID = @"ID";
             return [[dic allValues][0] count];
         
     }else
-        return [self.dataArray[section] count];
+        return [self.dataArray count];
     
 }
 
@@ -124,19 +191,24 @@ static NSString *ID = @"ID";
 {
     ZRDiscoveryTableCell *cell = [ZRDiscoveryTableCell cellWithTableView:self.tableView withIndexPath:indexPath];
     cell.delegate = self;
+    cell.categoryDic = nil;
+    cell.dic = nil;
+    cell.latestProductArr = nil;
+    
     if (self.cellIndex == index0) {
         if (indexPath.section == 0) {
+            //cell.dic = nil;
             cell.categoryDic = self.dataArray[0];
-            cell.dic = nil;
         }else{
             //cell.categoryDic = nil;
             cell.dic = self.dataArray[indexPath.section];
         }
         
-        
     }else{
-        cell.dic = self.dataArray[indexPath.section];
         
+        //cell.dic = nil;
+        //cell.categoryDic = nil;
+        cell.latestProductArr = self.dataArray[indexPath.row];
     }
     
 //    cell.layer.borderColor = [UIColor grayColor].CGColor;
@@ -161,7 +233,7 @@ static NSString *ID = @"ID";
         
         return _headerView;
     }else
-        return _headerView;
+        return nil;
     
 }
 
@@ -195,7 +267,7 @@ static NSString *ID = @"ID";
         }else
             return 125;
     }else
-        return 150;
+        return 170;
     
 }
 
@@ -269,21 +341,7 @@ static NSString *ID = @"ID";
 }
 
 
-#pragma mark - 显示浮动向上的按钮
-- (void)showFloatedUpButton
-{
-    UIWindow *window = [UIApplication sharedApplication].keyWindow;
-    CGFloat width = 40*SCREEN_WIDTH/375;
-    CGFloat x = SCREEN_WIDTH-width-15;
-    CGFloat y = SCREEN_HEIGHT-15-49-width;
-    UIButton *upButton = [MyControl createButtonWithFrame:CGRectMake(x, y, width, width) ImageName:@"" Target:self Action:@selector(upButtonClick:) Title:nil];
-    
-#warning 暂无图片，先设置一个颜色
-    upButton.backgroundColor = [UIColor blackColor];
-    
-    [window addSubview:upButton];
-    
-}
+
 
 
 #pragma mark - click methods

@@ -21,7 +21,7 @@
 {
     NSMutableParagraphStyle* paragraphStyle = [[NSParagraphStyle defaultParagraphStyle] mutableCopy];
     paragraphStyle.lineBreakMode = NSLineBreakByCharWrapping;
-    paragraphStyle.alignment=NSTextAlignmentCenter;//文字居中：发现只能水平居中，而无法垂直居中
+    paragraphStyle.alignment=NSTextAlignmentCenter;//文字居中
     NSDictionary* attribute1 = @{
                                  NSForegroundColorAttributeName:color,//设置文字颜色
                                  NSFontAttributeName:font,//设置文字的字体
@@ -37,6 +37,9 @@
     CGRect rect1 = CGRectMake(point.x, point.y, size1.width, size1.height);
     [str drawInRect:rect1 withAttributes:attribute1];
     
+    
+
+    
     return size1;
     
 }
@@ -51,6 +54,49 @@
 - (void)drawImage:(UIImage *)image Rect:(CGRect)rect
 {
     [image drawInRect:rect];
+}
+
+
+/**
+ *  绘制直线
+ *
+ *  @param startPoint 起点
+ *  @param endPoint   终点
+ *  @param color      颜色
+ */
+- (void)drawLineStartPoint:(CGPoint)startPoint endPoint:(CGPoint)endPoint Color:(UIColor *)color
+{
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    CGContextSetStrokeColorWithColor(context, color.CGColor);
+    CGContextMoveToPoint(context, startPoint.x, startPoint.y);
+    CGContextAddLineToPoint(context, endPoint.x,endPoint.y);
+    CGContextStrokePath(context);
+}
+
+
+
+
+/**
+ *  绘制长方形
+ *
+ *  @param point1 左上角
+ *  @param point2 右上角
+ *  @param point3 右下角
+ *  @param point4 左下角
+ *  @param color  背景色
+ *  @param alpha  透明度
+ */
+- (void)drawRectangleWithPoint1:(CGPoint)point1 Point2:(CGPoint)point2 Point3:(CGPoint)point3 Point4:(CGPoint)point4 Color:(CGFloat)r G:(CGFloat)g B:(CGFloat)b Alpha:(float)alpha;
+{
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    CGContextMoveToPoint(context, point1.x,point1.y);
+    CGContextAddLineToPoint(context, point2.x,point2.y);
+    CGContextAddLineToPoint(context, point3.x,point3.y);
+    CGContextAddLineToPoint(context, point4.x,point4.y);
+    CGContextAddLineToPoint(context, point1.x,point1.y);
+    CGContextSetRGBFillColor(context, r, g, b, alpha);
+    CGContextFillPath(context);
+
 }
 
 

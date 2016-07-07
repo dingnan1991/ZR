@@ -16,6 +16,11 @@
 		A3BDDB4D1D2B4EA8005E35BD /* ZRIntegralMallFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = A3BDDB4C1D2B4EA8005E35BD /* ZRIntegralMallFrame.m */; };
 		A3BDDB501D2CAE08005E35BD /* UIView+ZRDraw.m in Sources */ = {isa = PBXBuildFile; fileRef = A3BDDB4F1D2CAE08005E35BD /* UIView+ZRDraw.m */; };
 		A3BDDB531D2CB3AB005E35BD /* ZRRecommentHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = A3BDDB521D2CB3AB005E35BD /* ZRRecommentHeader.m */; };
+		A3BDDB561D2CE9DC005E35BD /* ZRIntegralMallCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A3BDDB551D2CE9DC005E35BD /* ZRIntegralMallCell.m */; };
+		A3BDDB5B1D2CF195005E35BD /* ZRDiscoveryController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3BDDB591D2CF195005E35BD /* ZRDiscoveryController.m */; };
+		A3BDDB5E1D2CF4D4005E35BD /* ZRProductDetalController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3BDDB5D1D2CF4D4005E35BD /* ZRProductDetalController.m */; };
+		A3BDDB621D2CF855005E35BD /* ZRImmediatelyExchangeController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3BDDB611D2CF855005E35BD /* ZRImmediatelyExchangeController.m */; };
+		A3BDDB661D2D0693005E35BD /* ZRImmediatelyExchangeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A3BDDB651D2D0693005E35BD /* ZRImmediatelyExchangeCell.m */; };
 		BD1CA8041D2371570005EF92 /* AdView.m in Sources */ = {isa = PBXBuildFile; fileRef = BD1CA8021D2371570005EF92 /* AdView.m */; };
 		BD1CA8051D2371570005EF92 /* placeHoder.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BD1CA8031D2371570005EF92 /* placeHoder.jpg */; };
 		BD1CA8081D2371A70005EF92 /* ZRHomeHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = BD1CA8071D2371A70005EF92 /* ZRHomeHeadView.m */; };
@@ -39,7 +44,6 @@
 		BDB542DA1D1BA3C60019C34D /* ZRBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDB542D91D1BA3C60019C34D /* ZRBaseViewController.m */; };
 		BDB542DE1D1BA5520019C34D /* MyControl.m in Sources */ = {isa = PBXBuildFile; fileRef = BDB542DD1D1BA5520019C34D /* MyControl.m */; };
 		BDB542E21D1BA7CA0019C34D /* UIBarButtonItem+Item.m in Sources */ = {isa = PBXBuildFile; fileRef = BDB542E11D1BA7CA0019C34D /* UIBarButtonItem+Item.m */; };
-		BDB542E81D1BAA660019C34D /* ZRDiscoveryController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDB542E71D1BAA660019C34D /* ZRDiscoveryController.m */; };
 		BDB542EB1D1BAA750019C34D /* ZRMyPageController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDB542EA1D1BAA750019C34D /* ZRMyPageController.m */; };
 		BDD7A5D41D27B76C00373338 /* ZRHomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD7A5D31D27B76C00373338 /* ZRHomeController.m */; };
 		BDD7A5D81D27B84900373338 /* ZRTableVIewHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD7A5D71D27B84900373338 /* ZRTableVIewHeadView.m */; };
@@ -84,6 +88,16 @@
 		A3BDDB4F1D2CAE08005E35BD /* UIView+ZRDraw.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ZRDraw.m"; sourceTree = "<group>"; };
 		A3BDDB511D2CB3AB005E35BD /* ZRRecommentHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZRRecommentHeader.h; sourceTree = "<group>"; };
 		A3BDDB521D2CB3AB005E35BD /* ZRRecommentHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZRRecommentHeader.m; sourceTree = "<group>"; };
+		A3BDDB541D2CE9DC005E35BD /* ZRIntegralMallCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZRIntegralMallCell.h; sourceTree = "<group>"; };
+		A3BDDB551D2CE9DC005E35BD /* ZRIntegralMallCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZRIntegralMallCell.m; sourceTree = "<group>"; };
+		A3BDDB581D2CF195005E35BD /* ZRDiscoveryController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZRDiscoveryController.h; sourceTree = "<group>"; };
+		A3BDDB591D2CF195005E35BD /* ZRDiscoveryController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZRDiscoveryController.m; sourceTree = "<group>"; };
+		A3BDDB5C1D2CF4D4005E35BD /* ZRProductDetalController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZRProductDetalController.h; sourceTree = "<group>"; };
+		A3BDDB5D1D2CF4D4005E35BD /* ZRProductDetalController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZRProductDetalController.m; sourceTree = "<group>"; };
+		A3BDDB601D2CF855005E35BD /* ZRImmediatelyExchangeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZRImmediatelyExchangeController.h; sourceTree = "<group>"; };
+		A3BDDB611D2CF855005E35BD /* ZRImmediatelyExchangeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZRImmediatelyExchangeController.m; sourceTree = "<group>"; };
+		A3BDDB641D2D0693005E35BD /* ZRImmediatelyExchangeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZRImmediatelyExchangeCell.h; sourceTree = "<group>"; };
+		A3BDDB651D2D0693005E35BD /* ZRImmediatelyExchangeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZRImmediatelyExchangeCell.m; sourceTree = "<group>"; };
 		BD1CA8011D2371570005EF92 /* AdView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdView.h; sourceTree = "<group>"; };
 		BD1CA8021D2371570005EF92 /* AdView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdView.m; sourceTree = "<group>"; };
 		BD1CA8031D2371570005EF92 /* placeHoder.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = placeHoder.jpg; sourceTree = "<group>"; };
@@ -129,8 +143,6 @@
 		BDB542DD1D1BA5520019C34D /* MyControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyControl.m; sourceTree = "<group>"; };
 		BDB542E01D1BA7CA0019C34D /* UIBarButtonItem+Item.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+Item.h"; sourceTree = "<group>"; };
 		BDB542E11D1BA7CA0019C34D /* UIBarButtonItem+Item.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+Item.m"; sourceTree = "<group>"; };
-		BDB542E61D1BAA660019C34D /* ZRDiscoveryController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZRDiscoveryController.h; sourceTree = "<group>"; };
-		BDB542E71D1BAA660019C34D /* ZRDiscoveryController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZRDiscoveryController.m; sourceTree = "<group>"; };
 		BDB542E91D1BAA750019C34D /* ZRMyPageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZRMyPageController.h; sourceTree = "<group>"; };
 		BDB542EA1D1BAA750019C34D /* ZRMyPageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZRMyPageController.m; sourceTree = "<group>"; };
 		BDD7A5D21D27B76B00373338 /* ZRHomeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZRHomeController.h; sourceTree = "<group>"; };
@@ -202,6 +214,42 @@
 				A3BDDB4C1D2B4EA8005E35BD /* ZRIntegralMallFrame.m */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		A3BDDB571D2CF195005E35BD /* 发现 */ = {
+			isa = PBXGroup;
+			children = (
+				A3BDDB581D2CF195005E35BD /* ZRDiscoveryController.h */,
+				A3BDDB591D2CF195005E35BD /* ZRDiscoveryController.m */,
+			);
+			path = "发现";
+			sourceTree = "<group>";
+		};
+		A3BDDB5A1D2CF195005E35BD /* 商品详情 */ = {
+			isa = PBXGroup;
+			children = (
+				A3BDDB5C1D2CF4D4005E35BD /* ZRProductDetalController.h */,
+				A3BDDB5D1D2CF4D4005E35BD /* ZRProductDetalController.m */,
+			);
+			path = "商品详情";
+			sourceTree = "<group>";
+		};
+		A3BDDB5F1D2CF81F005E35BD /* 立即兑换 */ = {
+			isa = PBXGroup;
+			children = (
+				A3BDDB601D2CF855005E35BD /* ZRImmediatelyExchangeController.h */,
+				A3BDDB611D2CF855005E35BD /* ZRImmediatelyExchangeController.m */,
+			);
+			path = "立即兑换";
+			sourceTree = "<group>";
+		};
+		A3BDDB631D2D0613005E35BD /* 立即兑换 */ = {
+			isa = PBXGroup;
+			children = (
+				A3BDDB641D2D0693005E35BD /* ZRImmediatelyExchangeCell.h */,
+				A3BDDB651D2D0693005E35BD /* ZRImmediatelyExchangeCell.m */,
+			);
+			path = "立即兑换";
 			sourceTree = "<group>";
 		};
 		BD1CA8001D2371570005EF92 /* AdView */ = {
@@ -396,8 +444,9 @@
 		BDB542CA1D1B88E60019C34D /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				BDB542E61D1BAA660019C34D /* ZRDiscoveryController.h */,
-				BDB542E71D1BAA660019C34D /* ZRDiscoveryController.m */,
+				A3BDDB571D2CF195005E35BD /* 发现 */,
+				A3BDDB5A1D2CF195005E35BD /* 商品详情 */,
+				A3BDDB5F1D2CF81F005E35BD /* 立即兑换 */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -421,6 +470,7 @@
 		BDB542CD1D1B88E60019C34D /* View */ = {
 			isa = PBXGroup;
 			children = (
+				A3BDDB631D2D0613005E35BD /* 立即兑换 */,
 				A32C1C4E1D2A1A0A007E0E63 /* ZRSegmentView.h */,
 				A32C1C4F1D2A1A0A007E0E63 /* ZRSegmentView.m */,
 				A3BDDB411D2A6C88005E35BD /* ZRDiscoveryCell.h */,
@@ -429,6 +479,8 @@
 				A3BDDB451D2A90C8005E35BD /* ZRDiscoveryTableCell.m */,
 				A3BDDB511D2CB3AB005E35BD /* ZRRecommentHeader.h */,
 				A3BDDB521D2CB3AB005E35BD /* ZRRecommentHeader.m */,
+				A3BDDB541D2CE9DC005E35BD /* ZRIntegralMallCell.h */,
+				A3BDDB551D2CE9DC005E35BD /* ZRIntegralMallCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -757,8 +809,11 @@
 				BDB542C51D1B7E570019C34D /* UIView+Extension.m in Sources */,
 				BD4FEFDE1D23C7220040D240 /* UINavigationBar+ZRAwesome.m in Sources */,
 				BDB542E21D1BA7CA0019C34D /* UIBarButtonItem+Item.m in Sources */,
+				A3BDDB5B1D2CF195005E35BD /* ZRDiscoveryController.m in Sources */,
 				BDB542EB1D1BAA750019C34D /* ZRMyPageController.m in Sources */,
+				A3BDDB661D2D0693005E35BD /* ZRImmediatelyExchangeCell.m in Sources */,
 				BDD7A5D81D27B84900373338 /* ZRTableVIewHeadView.m in Sources */,
+				A3BDDB561D2CE9DC005E35BD /* ZRIntegralMallCell.m in Sources */,
 				A3BDDB461D2A90C8005E35BD /* ZRDiscoveryTableCell.m in Sources */,
 				BDB542191D1A7A440019C34D /* AppDelegate.m in Sources */,
 				BD4FEFE51D24C01E0040D240 /* ZRHomeCellOne.m in Sources */,
@@ -768,18 +823,19 @@
 				A3BDDB4D1D2B4EA8005E35BD /* ZRIntegralMallFrame.m in Sources */,
 				BDD7A5E21D2B436100373338 /* ZRLookForTasteController.m in Sources */,
 				BDB542DE1D1BA5520019C34D /* MyControl.m in Sources */,
+				A3BDDB5E1D2CF4D4005E35BD /* ZRProductDetalController.m in Sources */,
 				A3BDDB431D2A6C88005E35BD /* ZRDiscoveryCell.m in Sources */,
 				BD1CA8081D2371A70005EF92 /* ZRHomeHeadView.m in Sources */,
 				A3BDDB401D2A490B005E35BD /* NSString+ZRString.m in Sources */,
 				BDB542C81D1B824A0019C34D /* ZRTabBarButton.m in Sources */,
 				A3BDDB491D2AA528005E35BD /* ZRColletionViewLayout.m in Sources */,
-				BDB542E81D1BAA660019C34D /* ZRDiscoveryController.m in Sources */,
 				BDB542501D1A7F620019C34D /* ZRTabBarViewController.m in Sources */,
 				BDB542561D1A84B70019C34D /* ZRTabBar.m in Sources */,
 				BDD7A5DE1D2B3E3100373338 /* ZRQueryView.m in Sources */,
 				BDD7A5D41D27B76C00373338 /* ZRHomeController.m in Sources */,
 				BD4FEFEA1D24CA3E0040D240 /* ZRHomeCellTwo.m in Sources */,
 				BDB542531D1A81770019C34D /* ZRNavigationController.m in Sources */,
+				A3BDDB621D2CF855005E35BD /* ZRImmediatelyExchangeController.m in Sources */,
 				A32C1C501D2A1A0A007E0E63 /* ZRSegmentView.m in Sources */,
 				A3BDDB531D2CB3AB005E35BD /* ZRRecommentHeader.m in Sources */,
 				BDB542DA1D1BA3C60019C34D /* ZRBaseViewController.m in Sources */,
@@ -920,7 +976,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/Tools/ZRPrefixHeader.pch";
 				INFOPLIST_FILE = zhiruProduct/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = weijianan.zhiruProduct;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -935,7 +991,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/Tools/ZRPrefixHeader.pch";
 				INFOPLIST_FILE = zhiruProduct/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = weijianan.zhiruProduct;
 				PRODUCT_NAME = "$(TARGET_NAME)";
