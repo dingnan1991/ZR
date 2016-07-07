@@ -38,4 +38,6 @@ typedef NS_ENUM(NSInteger, UICollectionCellIndex) {
 @property (nonatomic, strong) UIButton *upButton;
 
 
+- (void)showUpButton:(BOOL)b;
+
 @end

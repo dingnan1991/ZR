@@ -32,6 +32,15 @@ static NSString *ID = @"cell";
     return [super initWithCollectionViewLayout:layout];
 }
 
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    if (_segmentView) {
+        //默认选中积分商城
+        [_segmentView buttonPressed:[_segmentView viewWithTag:11]];
+    }
+}
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -51,6 +60,7 @@ static NSString *ID = @"cell";
 
 }
 
+
 #pragma mark - PrivateMethods
 - (void)setUpTitleView
 {
@@ -60,14 +70,10 @@ static NSString *ID = @"cell";
     _segmentView.tag = 21;
     _segmentView.textNormalColor = RGBCOLOR(85, 85, 85);
     _segmentView.delegate = self;
-    //_segmentView.backgroundNormalColor = [UIColor clearColor];
-    //_segmentView.backgroundSeletedColor = [UIColor redColor];
     _segmentView.linColor = RGBCOLOR(140, 199, 181);
     _segmentView.textFont = [UIFont systemFontOfSize:16];
     [_segmentView loadTitleArray:arrar];
     self.navigationItem.titleView = _segmentView;
-    //默认选中积分商城
-     [_segmentView buttonPressed:[_segmentView viewWithTag:11]];
     
 }
 
@@ -138,30 +144,24 @@ static NSString *ID = @"cell";
         NSDictionary *dic7 = @{@"热门生活":@[@"双人烤肉套餐",@"双人烤肉套餐",@"双人烤肉套餐"]};
         
         cell.dataArray = @[dic1,dic2,dic3,dic4,dic5,dic6,dic7];
-        [cell.upButton setHidden:NO];
+        
+        [cell showUpButton:YES];
+        
+              
+        
         
     }else if (indexPath.item == 1){
-        
-        //cell.backgroundColor = [UIColor redColor];
         cell.cellIndex = index1;
         cell.collectionArray = @[@"1",@"2"];
-        
-        //cell.upButton = nil;
-        if (cell.upButton) {
-            [[UIApplication sharedApplication].keyWindow.subviews[[UIApplication sharedApplication].keyWindow.subviews.count-1] setHidden:YES];
-        }
-        
-        
-        
+        [cell showUpButton:NO];
     }else{
        
         cell.backgroundColor = [UIColor grayColor];
         cell.cellIndex = index2;
         cell.dataArray = @[@[ZRImage(@"tu-0"),@"双人烤肉套餐",@"$ 200",@"300m"],@[ZRImage(@"tu-0"),@"双人烤肉套餐",@"$ 200",@"300m"],@[ZRImage(@"tu-0"),@"双人烤肉套餐",@"$ 200",@"300m"],@[ZRImage(@"tu-0"),@"双人烤肉套餐",@"$ 200",@"300m"],@[ZRImage(@"tu-0"),@"双人烤肉套餐",@"$ 200",@"300m"],@[ZRImage(@"tu-0"),@"双人烤肉套餐",@"$ 200",@"300m"],@[ZRImage(@"tu-0"),@"双人烤肉套餐",@"$ 200",@"300m"]];
         
-        if (cell.upButton) {
-            [[UIApplication sharedApplication].keyWindow.subviews[[UIApplication sharedApplication].keyWindow.subviews.count-1] setHidden:YES];
-        }
+        [cell showUpButton:NO];
+       
         
         
     }
@@ -206,6 +206,8 @@ static NSString *ID = @"cell";
     ZRProductDetalController *productDetailCtl = [[ZRProductDetalController alloc] init];
     [self.navigationController pushViewController:productDetailCtl animated:YES];
 }
+
+
 
 
 

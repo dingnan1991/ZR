@@ -41,6 +41,7 @@ static NSString *ID = @"ID";
         _tableView.backgroundColor = RGBCOLOR(240, 240, 240);
         [self addSubview:_tableView];
         
+        
     }
     return _tableView;
 }
@@ -56,7 +57,6 @@ static NSString *ID = @"ID";
         _collectionView.backgroundColor = RGBCOLOR(240, 240, 240);
         _collectionView.delegate = self;
         _collectionView.dataSource = self;
-        
        
     }
     return _collectionView;
@@ -70,18 +70,31 @@ static NSString *ID = @"ID";
 -(UIButton *)upButton
 {
     if (!_upButton) {
-        UIWindow *myWindow = [UIApplication sharedApplication].keyWindow;
+        //UIWindow *myWindow = [UIApplication sharedApplication].keyWindow;
         CGFloat width = 40*SCREEN_WIDTH/375;
         CGFloat x = SCREEN_WIDTH-width-15;
         CGFloat y = SCREEN_HEIGHT-15-49-width;
-        _upButton = [MyControl createButtonWithFrame:CGRectMake(x, y, width, width) ImageName:@"" Target:self Action:@selector(upButtonClick:) Title:nil];
+        _upButton = [MyControl createButtonWithFrame:CGRectMake(300, 500, width, width) ImageName:@"" Target:self Action:@selector(upButtonClick:) Title:nil];
 #warning 暂无图片，先设置一个颜色
         _upButton.backgroundColor = [UIColor blackColor];
-        [myWindow addSubview:_upButton];
         
     }
     return _upButton;
 }
+
+
+- (void)showUpButton:(BOOL)b
+{
+    if (b== YES) {
+        [self addSubview:self.upButton];
+        [self bringSubviewToFront:self.upButton];
+    }else{
+        [_upButton removeFromSuperview];
+    }
+}
+
+
+
 
 -(void)setDataArray:(NSArray *)dataArray
 {
