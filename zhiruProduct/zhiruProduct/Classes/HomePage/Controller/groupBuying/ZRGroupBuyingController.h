@@ -7,8 +7,8 @@
 //  团购
 
 #import "ZRBaseViewController.h"
+#import "ZRHomeBaseViewController.h"
 
-
-@interface ZRGroupBuyingController : ZRBaseViewController
+@interface ZRGroupBuyingController :  ZRHomeBaseViewController
 
 @end
