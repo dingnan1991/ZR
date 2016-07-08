@@ -14,6 +14,7 @@
 #import "ZRHomeCellTwo.h"
 #import "ZRLookForTasteController.h"
 #import "ZROrderingController.h"
+#import "ZRSupermarketController.h"
 
 #define NAVBAR_CHANGE_POINT 50
 #define NAVCOLOR [UIColor colorWithRed:250/255.0 green:250/255.0 blue:250/255.0 alpha:1]
@@ -61,6 +62,12 @@
                 {
                     ZROrderingController * orderingVC = [[ZROrderingController alloc] init];
                     [ws.navigationController pushViewController:orderingVC animated:YES];
+                }
+                    break;
+                case 6:
+                {
+                    ZRSupermarketController * supermarketVC = [[ZRSupermarketController alloc] init];
+                    [ws.navigationController pushViewController:supermarketVC animated:YES];
                 }
                     break;
                 default:
