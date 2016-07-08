@@ -68,5 +68,8 @@
     NSLog(@"点击筛选");
     self.hidden = YES;
     //回调
+    if (self.screeningViewClick) {
+        self.screeningViewClick(btn.titleLabel.text);
+    }
 }
 @end

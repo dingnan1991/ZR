@@ -1,39 +1,41 @@
 //
-//  ZRGroupBuyingController.m
+//  ZREntertainmentController.m
 //  zhiruProduct
 //
-//  Created by 魏嘉楠 on 16/7/5.
+//  Created by 魏嘉楠 on 16/7/8.
 //  Copyright © 2016年 Zhiru. All rights reserved.
 //
 
-#import "ZRGroupBuyingController.h"
-#import "ZRGroupBuyingCell.h"
+#import "ZREntertainmentController.h"
+#import "ZREntertainmentCell.h"
 
-@interface ZRGroupBuyingController ()
 
+@interface ZREntertainmentController ()
 
 @end
 
-@implementation ZRGroupBuyingController
+@implementation ZREntertainmentController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
-    self.screeningView.screeningViewClick = ^(NSString * infoStr){
-        NSLog(@"%@",infoStr);
-    };
+    // Do any additional setup after loading the view.
 }
 
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - 创建头视图
 - (void)createHeadView{
     
-
     for (int i = 0; i < self.ScreeningDict.count; i++) {
-      
+        
         
         ZRScreeningView * screeningView = [[ZRScreeningView alloc] initWithFrame:CGRectMake(0, 104, ScreenWidth, ScreenHeight - 40)andTitleArr:self.ScreeningDict[self.queryArr[i]]];
         [self.view addSubview:screeningView];
         
-
+        
         
         screeningView.screeningViewClick = ^(NSString * infoStr){
             NSLog(@"%@",infoStr);
@@ -41,14 +43,10 @@
         
         [self.screeningMarr addObject:screeningView];
     }
-    
-    
-    
 }
-#pragma mark - tableView代理
+#pragma mark -- tableView代理
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
     return 1;
-
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
@@ -56,22 +54,15 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    static NSString * Cell = @"GroupBuyingCell";
-    ZRGroupBuyingCell *ordeingCell = [tableView dequeueReusableCellWithIdentifier:Cell];
+    static NSString * Cell = @"entertainmentCell";
+    ZREntertainmentCell *entertainmentCell = [tableView dequeueReusableCellWithIdentifier:Cell];
     
-    if (ordeingCell == nil) {
-        NSArray *nibs = [[NSBundle mainBundle]loadNibNamed:NSStringFromClass([ZRGroupBuyingCell class]) owner:self options:nil];
-        ordeingCell = [nibs lastObject];
+    if (entertainmentCell == nil) {
+        NSArray *nibs = [[NSBundle mainBundle]loadNibNamed:NSStringFromClass([ZREntertainmentCell class]) owner:self options:nil];
+        entertainmentCell = [nibs lastObject];
     }
     
-    return ordeingCell;
-}
-
-
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    return entertainmentCell;
 }
 
 /*

@@ -48,9 +48,9 @@
     [super layoutSubviews];
     
     if (_titleArr.count > 4) {
-        _baseView.frame = CGRectMake(0, 0, ScreenWidth, 180);
+        _baseView.frame = CGRectMake(0, 0, ScreenWidth, 200);
     }else{
-        _baseView.frame = CGRectMake(0, 0, ScreenWidth, 90);
+        _baseView.frame = CGRectMake(0, 0, ScreenWidth, 110);
     }
     
     [self createSubView];

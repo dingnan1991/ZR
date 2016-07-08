@@ -7,7 +7,8 @@
 //
 
 #import "ZRBaseViewController.h"
+#import "ZRHomeBaseViewController.h"
 
-@interface ZROrderingController : ZRBaseViewController
+@interface ZROrderingController : ZRHomeBaseViewController
 
 @end

@@ -14,6 +14,9 @@
 #import "ZRHomeCellTwo.h"
 #import "ZRLookForTasteController.h"
 #import "ZROrderingController.h"
+#import "ZRGroupBuyingController.h"
+#import "ZREntertainmentController.h"
+
 
 #define NAVBAR_CHANGE_POINT 50
 #define NAVCOLOR [UIColor colorWithRed:250/255.0 green:250/255.0 blue:250/255.0 alpha:1]
@@ -51,16 +54,31 @@
             switch (index) {
                 case 0: //寻味
                 {
-                    ZRLookForTasteController * lookVC = [[ZRLookForTasteController alloc] init];
+                    ZRLookForTasteController * lookVC = [[ZRLookForTasteController alloc] initWithTitleArr:@[@"自助",@"烧烤",@"川菜",@"西北菜",@"粤菜",@"东北菜",@"浙江菜",@"简餐"] andScreeningDict:@{@"地理":@[@"1000",@"2000",@"3000",@"4000"],@"品类":@[@"200",@"300"],@"排序":@[@"900",@"1000",@"2300"],@"筛选":@[@"1",@"2",@"3"]} andQueryTitleArr:@[@"地理",@"品类",@"排序",@"筛选"]];
                     lookVC.title = @"寻味";
                     [ws.navigationController pushViewController:lookVC animated:YES];
                     
                 }
                     break;
+                case 1:
+                {
+                    ZRGroupBuyingController * groupVC = [[ZRGroupBuyingController alloc] initWithTitleArr:@[@"美食",@"丽人",@"娱乐",@"旅游",@"生活服务",@"精品购物",@"待定",@"待定"] andScreeningDict:@{@"地理":@[@"1000",@"2000",@"3000",@"4000"],@"品类":@[@"200",@"300"],@"排序":@[@"900",@"1000",@"2300"]} andQueryTitleArr:@[@"地理",@"品类",@"排序"]];
+                    groupVC.title = @"团购";
+                     [ws.navigationController pushViewController:groupVC animated:YES];
+                }
+                    break;
                 case 2:
                 {
-                    ZROrderingController * orderingVC = [[ZROrderingController alloc] init];
+                    ZROrderingController * orderingVC = [[ZROrderingController alloc] initWithTitleArr:@[@"简餐",@"川菜",@"粤菜",@"私厨",@"东北菜",@"甜品",@"待定",@"待定"] andScreeningDict:@{@"地理":@[@"1000",@"2000",@"3000",@"4000"],@"品类":@[@"200",@"300"],@"排序":@[@"900",@"1000",@"2300"]} andQueryTitleArr:@[@"地理",@"品类",@"排序",@"筛选"]];
                     [ws.navigationController pushViewController:orderingVC animated:YES];
+                }
+                    break;
+                case 3: //娱乐
+                {
+                    ZREntertainmentController * entertainmentVC = [[ZREntertainmentController alloc] initWithTitleArr:@[@"ktv",@"密室",@"台球",@"桌球"] andScreeningDict:@{@"地理":@[@"1000",@"2000",@"3000",@"4000"],@"品类":@[@"200",@"300"],@"排序":@[@"900",@"1000",@"2300"]} andQueryTitleArr:@[@"地理",@"品类",@"排序",@"筛选"]];
+                    
+                    entertainmentVC.title = @"娱乐";
+                    [ws.navigationController pushViewController:entertainmentVC animated:YES];
                 }
                     break;
                 default:

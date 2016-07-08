@@ -7,8 +7,8 @@
 //  寻味
 
 #import "ZRBaseViewController.h"
+#import "ZRHomeBaseViewController.h"
 
-
-@interface ZRLookForTasteController : ZRBaseViewController
+@interface ZRLookForTasteController : ZRHomeBaseViewController
 
 @end

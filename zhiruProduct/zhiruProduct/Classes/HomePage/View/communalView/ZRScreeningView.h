@@ -11,6 +11,10 @@
 @interface ZRScreeningView : UIView
 
 @property (nonatomic , strong) NSMutableArray * rootViewArr; //保存搜索条件根视图
+@property (nonatomic , copy) void (^screeningViewClick)(NSString * infoStr);
+
 //对象模型
 - (instancetype)initWithFrame:(CGRect)frame andTitleArr :(NSArray *)titleArr;
+
+
 @end
