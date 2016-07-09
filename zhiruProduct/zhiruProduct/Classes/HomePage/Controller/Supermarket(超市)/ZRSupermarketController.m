@@ -8,60 +8,25 @@
 
 #import "ZRSupermarketController.h"
 #import "ZRSupermarketCell.h"
-#import "AdView.h"
 
-
-#define categotyBtnTag          150
-
-@interface ZRSupermarketController ()<UICollectionViewDataSource, UICollectionViewDelegate>
-
-@property (nonatomic, strong) UICollectionView *collectionView;
-
-@property (nonatomic, strong) AdView *adView;
+@interface ZRSupermarketController ()
 
 @end
 
 static NSString *itemID =@"itemID";
 static NSString *headerID = @"headerID";
+static NSString *footerID = @"footerID";
 @implementation ZRSupermarketController
 #pragma mark - lifeCycle
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    [self.view addSubview:self.collectionView];
+   
     
 }
 
 
-#pragma mark - 懒加载
--(UICollectionView *)collectionView
-{
-    if (!_collectionView) {
-        UICollectionViewFlowLayout *layout  = [[UICollectionViewFlowLayout alloc] init];
-        layout.scrollDirection = UICollectionViewScrollDirectionVertical;
-        
-        //layout.itemSize = CGSizeMake(SCREEN_WIDTH, 100);
-        //layout.minimumInteritemSpacing = 6;
-        layout.minimumLineSpacing = 20;
-        layout.sectionInset = UIEdgeInsetsMake(1, 0, 20, 0);
-        
-        _collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 64, SCREEN_WIDTH, ScreenHeight-64) collectionViewLayout:layout];
-        _collectionView.collectionViewLayout = layout;
-        
-        _collectionView.alwaysBounceVertical =YES;
-        _collectionView.backgroundColor = [UIColor groupTableViewBackgroundColor];
-        _collectionView.dataSource =self;
-        _collectionView.delegate =self;
-        
-        [_collectionView registerClass:[ZRSupermarketCell class] forCellWithReuseIdentifier:itemID];
-        [_collectionView registerClass:[UICollectionReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:headerID];
-        
-        
-        
-    }
-    return _collectionView;
-}
 
 #pragma mark - UICollectionViewDataSource
 
@@ -81,44 +46,61 @@ static NSString *headerID = @"headerID";
 
 -(UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath
 {
-    
-    UICollectionReusableView *view = [self.collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:headerID forIndexPath:indexPath];
-    
-    if (indexPath.section == 3) {
-        UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(15, 0, SCREEN_WIDTH-15, view.height)];
-        label.text = @"最新折扣";
-        label.font = [UIFont systemFontOfSize:14];
-        [view addSubview:label];
+    if (kind == UICollectionElementKindSectionHeader) {
+        UICollectionReusableView *view = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:headerID forIndexPath:indexPath];
         
-        //line
-        UIView *line = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 1)];
-        line.backgroundColor = [UIColor blackColor];
-        [view addSubview:line];
+        if (indexPath.section == 3) {
+            UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(15, 10, SCREEN_WIDTH-15, view.height-10)];
+            label.text = @"最新折扣";
+            label.font = [UIFont systemFontOfSize:14];
+            [view addSubview:label];
+        }
+        
+        return view;
+        
+    }else{
+        UICollectionReusableView *footer = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionFooter withReuseIdentifier:footerID forIndexPath:indexPath];
+        footer.backgroundColor = [UIColor whiteColor];
+        if (indexPath.section == 3) {
+            UIButton *checkAllBtn = (UIButton *)[self setUpBtnWithCheckAll:CGPointMake(SCREEN_WIDTH/2,  footer.height/2)];
+            checkAllBtn.tag = kSuperMarket_LatestDiscount_CheckAll;
+            [footer addSubview:checkAllBtn];
+      
+        }
+        
+        
+        return footer;
         
     }
-   
-    return view;
 }
 
 -(UICollectionViewCell*)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    ZRSupermarketCell *cell = [self.collectionView dequeueReusableCellWithReuseIdentifier:itemID forIndexPath:indexPath];
+    ZRSupermarketCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:itemID forIndexPath:indexPath];
     cell.backgroundColor = [UIColor whiteColor];
-
-    
+    for (UIView *view in cell.subviews) {
+        [view removeFromSuperview];
+    }
+    cell.listArr = nil;
+    [cell setNeedsDisplay];
     
     if (indexPath.section == 0) {
         //轮播图
-         NSArray * imgUrl = @[@"http://img11.360buyimg.com/cms/jfs/t196/241/2413424678/109726/34738058/53cf6e32Na0cbe3e5.jpg",@"http://img11.360buyimg.com/cms/g16/M00/0C/0A/rBEbRlOK07EIAAAAAAPXHfjijrkAACZxAMOZPwAA9c1025.jpg"];
+        NSArray * imgUrl = @[@"http://img11.360buyimg.com/cms/jfs/t196/241/2413424678/109726/34738058/53cf6e32Na0cbe3e5.jpg",@"http://img11.360buyimg.com/cms/g16/M00/0C/0A/rBEbRlOK07EIAAAAAAPXHfjijrkAACZxAMOZPwAA9c1025.jpg"];
         [self setUpAdView:imgUrl SuperView:cell];
         
         
     }else if (indexPath.section == 1){
-        UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, cell.height)];
-        label.text = @"由North York大统华超市采购";
+        NSString *str = @"由North York大统华超市采购";
+        CGSize sizeStr = [NSString getSize:str strFont:[UIFont systemFontOfSize:12] maxSize:cell.size];
+        UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake((SCREEN_WIDTH-sizeStr.width)/2, 0, sizeStr.width, cell.height)];
+        label.text = str;
         label.font = [UIFont systemFontOfSize:12];
-        label.textAlignment = NSTextAlignmentCenter;
-        [cell.contentView addSubview:label];
+        [cell addSubview:label];
+        
+        UIImageView *imgView = [[UIImageView alloc] initWithFrame:CGRectMake(label.x-20, (label.height-sizeStr.height)/2, 10, sizeStr.height)];
+        imgView.image = ZRImage(@"dingwei");
+        [cell addSubview:imgView];
         
     }else if (indexPath.section == 2){
         //查看全部
@@ -128,19 +110,19 @@ static NSString *headerID = @"headerID";
         CGFloat y = 15;
         for (int i=0; i<4; i++) {
             UIButton *categoryBtn = [MyControl createButtonWithFrame:CGRectMake((i+1)*space+i*width, y, width, height) ImageName:@"dilan" Target:self Action:@selector(categoryBtnClick:) Title:nil];
-            categoryBtn.tag = categotyBtnTag+i;
-            [cell.contentView addSubview:categoryBtn];
+            categoryBtn.tag = kSuperMarket_Category1+i;
+            [cell addSubview:categoryBtn];
         }
         
-        UIButton *allBtn = [MyControl createButtonWithFrame:CGRectMake(0, 0, SCREEN_WIDTH/4, 25) ImageName:nil Target:self Action:@selector(checkAll:) Title:@"查看全部"];
-        allBtn.center = CGPointMake(SCREEN_WIDTH/2,  cell.height-25);
-        allBtn.layer.borderColor = [UIColor grayColor].CGColor;
-        allBtn.layer.borderWidth = 1;
-        allBtn.titleLabel.font = [UIFont systemFontOfSize:12];
-        [cell addSubview:allBtn];
+        UIButton *checkAllBtn = (UIButton *)[self setUpBtnWithCheckAll:CGPointMake(SCREEN_WIDTH/2,  cell.height-25)];
+        checkAllBtn.tag = kSuperMarket_CheckAll;
+        [cell addSubview:checkAllBtn];
         
     }else{
         
+        NSArray *arr = @[ZRImage(@"hanbao"),@"卫龙小面筋100g",@"$ 4.5",@"原价$5",ZRImage(@"chaos")];
+        cell.cellIndex = indexPath.item;
+        cell.listArr = arr;
     }
     
 
@@ -157,11 +139,28 @@ static NSString *headerID = @"headerID";
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout referenceSizeForHeaderInSection:(NSInteger)section
 {
     if (section == 3) {
-       return CGSizeMake(SCREEN_WIDTH, 30);
-    }else
+       return CGSizeMake(SCREEN_WIDTH, 40);
+    }else if(section == 0){
        return CGSizeMake(SCREEN_WIDTH, 0);
+    }else if(section == 1){
+       return CGSizeMake(SCREEN_WIDTH, 10);
+    }else
+       return CGSizeMake(SCREEN_WIDTH, 10);
     
 }
+
+/**
+ *  每个section的footer的height
+ *
+ */
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout referenceSizeForFooterInSection:(NSInteger)section
+{
+    if (section == 3) {
+        return CGSizeMake(SCREEN_WIDTH, 55);
+    }else
+        return CGSizeMake(SCREEN_WIDTH, 0);
+}
+
 
 /**
  *  cell的size
@@ -173,48 +172,71 @@ static NSString *headerID = @"headerID";
         return CGSizeMake(SCREEN_WIDTH, 30);
     }else if (indexPath.section == 2){
         return CGSizeMake(SCREEN_WIDTH, 140);
-    }else
+    }else if (indexPath.section == 0){
         return CGSizeMake(SCREEN_WIDTH, 100);
+    }else
+        return CGSizeMake(SCREEN_WIDTH/2, 150);
 }
 
-
-#pragma mark - Private methods
-- (void)setUpAdView:(NSArray *)urlArr SuperView:(UICollectionViewCell *)cell
+/**
+ *  最小行距
+ *
+ */
+- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section
 {
-    self.adView = [AdView adScrollViewWithFrame:CGRectMake(0, 0, ScreenWidth, 100) imageLinkURL:urlArr placeHoderImageName:@" " pageControlShowStyle:UIPageControlShowStyleCenter];
-    
-    
-    //图片被点击后回调的方法
-    WS(ws)
-    self.adView.callBack = ^(NSInteger index,NSString * imageURL,UIImageView * imgView)
-    {
-        if (ws.clickImg) {
-            ws.clickImg(index,imageURL,imgView);
-        }
-        
-    };
-    
-    [cell addSubview:self.adView];
-    
-}
-
-
-#pragma mark - Click methods
-
-- (void)categoryBtnClick:(UIButton *)sender
-{
+    return 0;
     
 }
 
 /**
- *  查看全部
+ *  最小列间距
  *
- *  @param sender
  */
-- (void)checkAll:(UIButton *)sender
+- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section
 {
-    
+    return 0;
 }
+
+
+
+
+#pragma mark - Click methods
+/**
+ *  粮油副食、休闲零食、火锅精选、牛奶果汁
+ *
+ *  @param sender 点击事件
+ */
+- (void)categoryBtnClick:(UIButton *)sender
+{
+    switch (sender.tag) {
+        case kSuperMarket_Category1:
+        {
+            
+        }
+            break;
+        case kSuperMarket_Category2:
+        {
+            
+        }
+            break;
+        case kSuperMarket_Category3:
+        {
+            
+        }
+            break;
+        case kSuperMarket_Category4:
+        {
+            
+        }
+            break;
+            
+        default:
+            break;
+    }
+}
+
+
+
 
 
 #pragma mark - manage memory methods

@@ -17,6 +17,7 @@
 #import "ZRSupermarketController.h"
 #import "ZRGroupBuyingController.h"
 #import "ZREntertainmentController.h"
+#import "ZRTravelViewController.h"
 #define NAVBAR_CHANGE_POINT 50
 #define NAVCOLOR [UIColor colorWithRed:250/255.0 green:250/255.0 blue:250/255.0 alpha:1]
 @interface ZRHomeController ()<UITableViewDelegate,UITableViewDataSource>
@@ -78,6 +79,12 @@
                     
                     entertainmentVC.title = @"娱乐";
                     [ws.navigationController pushViewController:entertainmentVC animated:YES];
+                }
+                    break;
+                case 5:
+                {
+                    ZRTravelViewController * travelVC = [[ZRTravelViewController alloc] init];
+                    [ws.navigationController pushViewController:travelVC animated:YES];
                 }
                     break;
                     

@@ -6,14 +6,14 @@
 //  Copyright © 2016年 Zhiru. All rights reserved.
 //
 
-#import "ZRBaseViewController.h"
+#import "ZRSuperCollectionViewController.h"
 
-@interface ZRSupermarketController : ZRBaseViewController
+@interface ZRSupermarketController : ZRSuperCollectionViewController
 
-/**
- *  轮播图点击回调
- */
-@property (nonatomic , copy) void (^clickImg)(NSInteger index,NSString * imageURL,UIImageView * imgView);
+///**
+// *  轮播图点击回调
+// */
+//@property (nonatomic , copy) void (^clickImg)(NSInteger index,NSString * imageURL,UIImageView * imgView);
 
 
 @end

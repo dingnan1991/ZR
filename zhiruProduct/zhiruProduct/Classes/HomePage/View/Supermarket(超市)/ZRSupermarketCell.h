@@ -10,4 +10,15 @@
 
 @interface ZRSupermarketCell : UICollectionViewCell
 
+
+@property (nonatomic, strong) NSArray *listArr;
+
+//索引
+@property (nonatomic, assign) NSInteger cellIndex;
+
+
+@property (nonatomic, strong) NSArray *travelArr;
+
+@property (nonatomic, strong) NSArray *categoryTravelArr;
+
 @end

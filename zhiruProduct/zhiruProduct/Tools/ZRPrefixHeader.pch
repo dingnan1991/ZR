@@ -223,4 +223,27 @@ alpha:1.0]
 
 //这是全局 占位图片, 换成公司logo
 #define ZRPlaceholderImage [UIImage imageNamed:@"find"]
+
+
+
+
+
+
+
+#pragma mark - 设置tag
+#define kBasicTag                                         100
+
+#define kTravel_CheckAll                                  kBasicTag+1
+#define kSuperMarket_CheckAll                             kBasicTag+2
+#define kSuperMarket_LatestDiscount_CheckAll              kBasicTag+3
+#define kSuperMarket_Category1                            kBasicTag+4
+#define kSuperMarket_Category2                            kBasicTag+5
+#define kSuperMarket_Category3                            kBasicTag+6
+#define kSuperMarket_Category4                            kBasicTag+7
+
+#define kDiscover_Category1                               kBasicTag+8
+
+
+
+
 #endif /* ZRPrefixHeader_pch */

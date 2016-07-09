@@ -50,4 +50,7 @@
  */
 - (void)drawRectangleWithPoint1:(CGPoint)point1 Point2:(CGPoint)point2 Point3:(CGPoint)point3 Point4:(CGPoint)point4 Color:(CGFloat)r G:(CGFloat)g B:(CGFloat)b Alpha:(float)alpha;
 
+
+- (CGSize)drawWithStr:(NSString *)str Font:(UIFont *)font Color:(UIColor *)color Point:(CGPoint)point Size:(CGSize)size;
+
 @end

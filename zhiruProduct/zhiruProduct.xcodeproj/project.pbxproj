@@ -24,6 +24,11 @@
 		A31EAC9C1D2E3E89004FD2B6 /* NSString+ZRString.m in Sources */ = {isa = PBXBuildFile; fileRef = A31EAC991D2E3E89004FD2B6 /* NSString+ZRString.m */; };
 		A31EACA01D2E4DB9004FD2B6 /* ZRSupermarketController.m in Sources */ = {isa = PBXBuildFile; fileRef = A31EAC9F1D2E4DB9004FD2B6 /* ZRSupermarketController.m */; };
 		A31EACA41D2E55B5004FD2B6 /* ZRSupermarketCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A31EACA31D2E55B5004FD2B6 /* ZRSupermarketCell.m */; };
+		A31EACA81D2F821F004FD2B6 /* ZRSuperCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A31EACA71D2F821F004FD2B6 /* ZRSuperCollectionViewController.m */; };
+		A3EC3C091D2F97DD000E8DFD /* ZRTravelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3EC3C081D2F97DD000E8DFD /* ZRTravelViewController.m */; };
+		A3FE6FB91D30A0FE005F4009 /* ZRSupermarketHome.m in Sources */ = {isa = PBXBuildFile; fileRef = A3FE6FB81D30A0FE005F4009 /* ZRSupermarketHome.m */; };
+		A3FE6FBC1D30A14F005F4009 /* ZRSupermarketHomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3FE6FBB1D30A14F005F4009 /* ZRSupermarketHomeController.m */; };
+		A3FE6FC01D30C89A005F4009 /* UIImage+ZRImage.m in Sources */ = {isa = PBXBuildFile; fileRef = A3FE6FBF1D30C89A005F4009 /* UIImage+ZRImage.m */; };
 		BD1CA8041D2371570005EF92 /* AdView.m in Sources */ = {isa = PBXBuildFile; fileRef = BD1CA8021D2371570005EF92 /* AdView.m */; };
 		BD1CA8051D2371570005EF92 /* placeHoder.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BD1CA8031D2371570005EF92 /* placeHoder.jpg */; };
 		BD1CA8081D2371A70005EF92 /* ZRHomeHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = BD1CA8071D2371A70005EF92 /* ZRHomeHeadView.m */; };
@@ -119,6 +124,16 @@
 		A31EAC9F1D2E4DB9004FD2B6 /* ZRSupermarketController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZRSupermarketController.m; sourceTree = "<group>"; };
 		A31EACA21D2E55B5004FD2B6 /* ZRSupermarketCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZRSupermarketCell.h; sourceTree = "<group>"; };
 		A31EACA31D2E55B5004FD2B6 /* ZRSupermarketCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZRSupermarketCell.m; sourceTree = "<group>"; };
+		A31EACA61D2F821F004FD2B6 /* ZRSuperCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZRSuperCollectionViewController.h; sourceTree = "<group>"; };
+		A31EACA71D2F821F004FD2B6 /* ZRSuperCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZRSuperCollectionViewController.m; sourceTree = "<group>"; };
+		A3EC3C071D2F97DD000E8DFD /* ZRTravelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZRTravelViewController.h; sourceTree = "<group>"; };
+		A3EC3C081D2F97DD000E8DFD /* ZRTravelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZRTravelViewController.m; sourceTree = "<group>"; };
+		A3FE6FB71D30A0FE005F4009 /* ZRSupermarketHome.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZRSupermarketHome.h; sourceTree = "<group>"; };
+		A3FE6FB81D30A0FE005F4009 /* ZRSupermarketHome.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZRSupermarketHome.m; sourceTree = "<group>"; };
+		A3FE6FBA1D30A14F005F4009 /* ZRSupermarketHomeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZRSupermarketHomeController.h; sourceTree = "<group>"; };
+		A3FE6FBB1D30A14F005F4009 /* ZRSupermarketHomeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZRSupermarketHomeController.m; sourceTree = "<group>"; };
+		A3FE6FBE1D30C89A005F4009 /* UIImage+ZRImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ZRImage.h"; sourceTree = "<group>"; };
+		A3FE6FBF1D30C89A005F4009 /* UIImage+ZRImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ZRImage.m"; sourceTree = "<group>"; };
 		BD1CA8011D2371570005EF92 /* AdView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdView.h; sourceTree = "<group>"; };
 		BD1CA8021D2371570005EF92 /* AdView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdView.m; sourceTree = "<group>"; };
 		BD1CA8031D2371570005EF92 /* placeHoder.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = placeHoder.jpg; sourceTree = "<group>"; };
@@ -363,8 +378,11 @@
 		A31EAC9D1D2E4D79004FD2B6 /* Supermarket(超市) */ = {
 			isa = PBXGroup;
 			children = (
+				A3FE6FB31D30A0B4005F4009 /* SupermaketHome(超市到家) */,
 				A31EAC9E1D2E4DB9004FD2B6 /* ZRSupermarketController.h */,
 				A31EAC9F1D2E4DB9004FD2B6 /* ZRSupermarketController.m */,
+				A31EACA61D2F821F004FD2B6 /* ZRSuperCollectionViewController.h */,
+				A31EACA71D2F821F004FD2B6 /* ZRSuperCollectionViewController.m */,
 			);
 			path = "Supermarket(超市)";
 			sourceTree = "<group>";
@@ -374,8 +392,37 @@
 			children = (
 				A31EACA21D2E55B5004FD2B6 /* ZRSupermarketCell.h */,
 				A31EACA31D2E55B5004FD2B6 /* ZRSupermarketCell.m */,
+				A3FE6FB71D30A0FE005F4009 /* ZRSupermarketHome.h */,
+				A3FE6FB81D30A0FE005F4009 /* ZRSupermarketHome.m */,
 			);
 			path = "Supermarket(超市)";
+			sourceTree = "<group>";
+		};
+		A31EACA51D2F81C9004FD2B6 /* Traval(旅行) */ = {
+			isa = PBXGroup;
+			children = (
+				A3EC3C071D2F97DD000E8DFD /* ZRTravelViewController.h */,
+				A3EC3C081D2F97DD000E8DFD /* ZRTravelViewController.m */,
+			);
+			path = "Traval(旅行)";
+			sourceTree = "<group>";
+		};
+		A3FE6FB31D30A0B4005F4009 /* SupermaketHome(超市到家) */ = {
+			isa = PBXGroup;
+			children = (
+				A3FE6FBA1D30A14F005F4009 /* ZRSupermarketHomeController.h */,
+				A3FE6FBB1D30A14F005F4009 /* ZRSupermarketHomeController.m */,
+			);
+			path = "SupermaketHome(超市到家)";
+			sourceTree = "<group>";
+		};
+		A3FE6FBD1D30C63A005F4009 /* UIImage */ = {
+			isa = PBXGroup;
+			children = (
+				A3FE6FBE1D30C89A005F4009 /* UIImage+ZRImage.h */,
+				A3FE6FBF1D30C89A005F4009 /* UIImage+ZRImage.m */,
+			);
+			path = UIImage;
 			sourceTree = "<group>";
 		};
 		BD1CA8001D2371570005EF92 /* AdView */ = {
@@ -570,6 +617,7 @@
 		BDB542C11D1B7E300019C34D /* Categorys */ = {
 			isa = PBXGroup;
 			children = (
+				A3FE6FBD1D30C63A005F4009 /* UIImage */,
 				A31EAC921D2E3E89004FD2B6 /* UIView */,
 				A31EAC971D2E3E89004FD2B6 /* NSString */,
 				BD4FEFDB1D23C6EA0040D240 /* UINavigationBar */,
@@ -593,11 +641,10 @@
 		BDB542CF1D1B88E60019C34D /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				A31EACA51D2F81C9004FD2B6 /* Traval(旅行) */,
 				A31EAC9D1D2E4D79004FD2B6 /* Supermarket(超市) */,
-
 				BDE860D71D2F4DA9000D436B /* beauty(丽人) */,
 				BDE860CD1D2F4064000D436B /* entertainment(娱乐) */,
-
 				BD7FCB2C1D2DEF3B0098455E /* ordering(订餐) */,
 				BDD7A5E31D2BA00E00373338 /*  groupBuying(团购) */,
 				BDD7A5DF1D2B433500373338 /*  lookForTaste(寻味) */,
@@ -626,10 +673,8 @@
 		BDB542D21D1B88E60019C34D /* View */ = {
 			isa = PBXGroup;
 			children = (
-
 				A31EACA11D2E559A004FD2B6 /* Supermarket(超市) */,
 				BDE860D61D2F467B000D436B /* entertainmentView(娱乐) */,
-
 				BD7FCB3B1D2E29E70098455E /* groupBuyingView(团购) */,
 				BD7FCB301D2DFA580098455E /* orderingView(订餐) */,
 				BDD7A5D51D27B81100373338 /* communalView(公用视图) */,
@@ -959,10 +1004,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A3FE6FB91D30A0FE005F4009 /* ZRSupermarketHome.m in Sources */,
 				BD7FCB3A1D2E245E0098455E /* navTitleView.m in Sources */,
 				A31EAC901D2E3DF9004FD2B6 /* ZRImmediatelyExchangeCell.m in Sources */,
 				A31EAC871D2E3DF9004FD2B6 /* ZRDiscoveryController.m in Sources */,
 				A31EAC8D1D2E3DF9004FD2B6 /* ZRIntegralMallCell.m in Sources */,
+				A31EACA81D2F821F004FD2B6 /* ZRSuperCollectionViewController.m in Sources */,
 				A31EAC9C1D2E3E89004FD2B6 /* NSString+ZRString.m in Sources */,
 				A31EACA41D2E55B5004FD2B6 /* ZRSupermarketCell.m in Sources */,
 				A31EACA01D2E4DB9004FD2B6 /* ZRSupermarketController.m in Sources */,
@@ -970,6 +1017,7 @@
 				BDB542E21D1BA7CA0019C34D /* UIBarButtonItem+Item.m in Sources */,
 				A31EAC9A1D2E3E89004FD2B6 /* UIView+Extension.m in Sources */,
 				BDB542EB1D1BAA750019C34D /* ZRMyPageController.m in Sources */,
+				A3FE6FBC1D30A14F005F4009 /* ZRSupermarketHomeController.m in Sources */,
 				BD7FCB3F1D2E2A130098455E /* ZRGroupBuyingCell.m in Sources */,
 				BDD7A5D81D27B84900373338 /* ZRTableVIewHeadView.m in Sources */,
 				BDB542191D1A7A440019C34D /* AppDelegate.m in Sources */,
@@ -993,6 +1041,7 @@
 				A31EAC8A1D2E3DF9004FD2B6 /* ZRColletionViewLayout.m in Sources */,
 				BDB542561D1A84B70019C34D /* ZRTabBar.m in Sources */,
 				BDD7A5E91D2CDF0F00373338 /* ZRScreeningView.m in Sources */,
+				A3FE6FC01D30C89A005F4009 /* UIImage+ZRImage.m in Sources */,
 				BDD7A5DE1D2B3E3100373338 /* ZRQueryView.m in Sources */,
 				BDE860CC1D2E4E86000D436B /* ZRHomeBaseViewController.m in Sources */,
 				BDD7A5D41D27B76C00373338 /* ZRHomeController.m in Sources */,
@@ -1001,6 +1050,7 @@
 				BDD7A5E61D2BA03700373338 /* ZRGroupBuyingController.m in Sources */,
 				BDB542531D1A81770019C34D /* ZRNavigationController.m in Sources */,
 				A31EAC881D2E3DF9004FD2B6 /* ZRProductDetalController.m in Sources */,
+				A3EC3C091D2F97DD000E8DFD /* ZRTravelViewController.m in Sources */,
 				BD7FCB341D2DFA820098455E /* ZROrdeingCell.m in Sources */,
 				BDB542DA1D1BA3C60019C34D /* ZRBaseViewController.m in Sources */,
 				A31EAC8C1D2E3DF9004FD2B6 /* ZRDiscoveryTableCell.m in Sources */,
