@@ -22,6 +22,11 @@
 		A31EAC9A1D2E3E89004FD2B6 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = A31EAC941D2E3E89004FD2B6 /* UIView+Extension.m */; };
 		A31EAC9B1D2E3E89004FD2B6 /* UIView+ZRDraw.m in Sources */ = {isa = PBXBuildFile; fileRef = A31EAC961D2E3E89004FD2B6 /* UIView+ZRDraw.m */; };
 		A31EAC9C1D2E3E89004FD2B6 /* NSString+ZRString.m in Sources */ = {isa = PBXBuildFile; fileRef = A31EAC991D2E3E89004FD2B6 /* NSString+ZRString.m */; };
+		BD0D17B51D34C83B00AC688A /* ZROrderingComment.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD0D17B41D34C83B00AC688A /* ZROrderingComment.xib */; };
+		BD0D17B81D34D05F00AC688A /* ZROrderingComment.m in Sources */ = {isa = PBXBuildFile; fileRef = BD0D17B71D34D05F00AC688A /* ZROrderingComment.m */; };
+		BD0D17BC1D34D61300AC688A /* ZROrderingCommentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BD0D17BA1D34D61300AC688A /* ZROrderingCommentCell.m */; };
+		BD0D17BD1D34D61300AC688A /* ZROrderingCommentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD0D17BB1D34D61300AC688A /* ZROrderingCommentCell.xib */; };
+		BD0D17C01D34E9C300AC688A /* ZRCommentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BD0D17BF1D34E9C300AC688A /* ZRCommentCell.m */; };
 		BD1CA8041D2371570005EF92 /* AdView.m in Sources */ = {isa = PBXBuildFile; fileRef = BD1CA8021D2371570005EF92 /* AdView.m */; };
 		BD1CA8051D2371570005EF92 /* placeHoder.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BD1CA8031D2371570005EF92 /* placeHoder.jpg */; };
 		BD1CA8081D2371A70005EF92 /* ZRHomeHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = BD1CA8071D2371A70005EF92 /* ZRHomeHeadView.m */; };
@@ -62,6 +67,17 @@
 		BDE860D01D2F45E0000D436B /* ZREntertainmentController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDE860CF1D2F45E0000D436B /* ZREntertainmentController.m */; };
 		BDE860D41D2F4653000D436B /* ZREntertainmentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BDE860D21D2F4653000D436B /* ZREntertainmentCell.m */; };
 		BDE860D51D2F4653000D436B /* ZREntertainmentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDE860D31D2F4653000D436B /* ZREntertainmentCell.xib */; };
+		BDE860DA1D2F4F8D000D436B /* ZRBeautyController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDE860D91D2F4F8D000D436B /* ZRBeautyController.m */; };
+		BDE860DD1D2F5D8E000D436B /* ZROrderingDetailsController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDE860DC1D2F5D8E000D436B /* ZROrderingDetailsController.m */; };
+		BDE860DF1D2F5E63000D436B /* orderingDetailsHeadView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDE860DE1D2F5E63000D436B /* orderingDetailsHeadView.xib */; };
+		BDE860E21D2F89AD000D436B /* orderingDetailsHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = BDE860E11D2F89AD000D436B /* orderingDetailsHeadView.m */; };
+		BDE860E51D3096CC000D436B /* ZROrdeingCarteCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BDE860E41D3096CC000D436B /* ZROrdeingCarteCell.m */; };
+		BDE860E91D30A1A2000D436B /* UIButton+ZRButtonColor.m in Sources */ = {isa = PBXBuildFile; fileRef = BDE860E81D30A1A2000D436B /* UIButton+ZRButtonColor.m */; };
+		BDE860ED1D30A4A7000D436B /* ZRCarteTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BDE860EB1D30A4A7000D436B /* ZRCarteTableViewCell.m */; };
+		BDE860EE1D30A4A7000D436B /* ZRCarteTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDE860EC1D30A4A7000D436B /* ZRCarteTableViewCell.xib */; };
+		BDE860F01D30D2FB000D436B /* orderingSectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDE860EF1D30D2FB000D436B /* orderingSectionView.xib */; };
+		BDE860F31D30D56C000D436B /* orderingSectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = BDE860F21D30D56C000D436B /* orderingSectionView.m */; };
+		BDE860F61D30D8CB000D436B /* ZRBaseOrderingViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BDE860F51D30D8CB000D436B /* ZRBaseOrderingViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -113,6 +129,14 @@
 		A31EAC961D2E3E89004FD2B6 /* UIView+ZRDraw.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ZRDraw.m"; sourceTree = "<group>"; };
 		A31EAC981D2E3E89004FD2B6 /* NSString+ZRString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+ZRString.h"; sourceTree = "<group>"; };
 		A31EAC991D2E3E89004FD2B6 /* NSString+ZRString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+ZRString.m"; sourceTree = "<group>"; };
+		BD0D17B41D34C83B00AC688A /* ZROrderingComment.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZROrderingComment.xib; sourceTree = "<group>"; };
+		BD0D17B61D34D05F00AC688A /* ZROrderingComment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZROrderingComment.h; sourceTree = "<group>"; };
+		BD0D17B71D34D05F00AC688A /* ZROrderingComment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZROrderingComment.m; sourceTree = "<group>"; };
+		BD0D17B91D34D61300AC688A /* ZROrderingCommentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZROrderingCommentCell.h; sourceTree = "<group>"; };
+		BD0D17BA1D34D61300AC688A /* ZROrderingCommentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZROrderingCommentCell.m; sourceTree = "<group>"; };
+		BD0D17BB1D34D61300AC688A /* ZROrderingCommentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZROrderingCommentCell.xib; sourceTree = "<group>"; };
+		BD0D17BE1D34E9C300AC688A /* ZRCommentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZRCommentCell.h; sourceTree = "<group>"; };
+		BD0D17BF1D34E9C300AC688A /* ZRCommentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZRCommentCell.m; sourceTree = "<group>"; };
 		BD1CA8011D2371570005EF92 /* AdView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdView.h; sourceTree = "<group>"; };
 		BD1CA8021D2371570005EF92 /* AdView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdView.m; sourceTree = "<group>"; };
 		BD1CA8031D2371570005EF92 /* placeHoder.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = placeHoder.jpg; sourceTree = "<group>"; };
@@ -188,6 +212,25 @@
 		BDE860D11D2F4653000D436B /* ZREntertainmentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZREntertainmentCell.h; path = ../ZREntertainmentCell.h; sourceTree = "<group>"; };
 		BDE860D21D2F4653000D436B /* ZREntertainmentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZREntertainmentCell.m; path = ../ZREntertainmentCell.m; sourceTree = "<group>"; };
 		BDE860D31D2F4653000D436B /* ZREntertainmentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ZREntertainmentCell.xib; path = ../ZREntertainmentCell.xib; sourceTree = "<group>"; };
+		BDE860D81D2F4F8D000D436B /* ZRBeautyController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZRBeautyController.h; sourceTree = "<group>"; };
+		BDE860D91D2F4F8D000D436B /* ZRBeautyController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZRBeautyController.m; sourceTree = "<group>"; };
+		BDE860DB1D2F5D8E000D436B /* ZROrderingDetailsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZROrderingDetailsController.h; sourceTree = "<group>"; };
+		BDE860DC1D2F5D8E000D436B /* ZROrderingDetailsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZROrderingDetailsController.m; sourceTree = "<group>"; };
+		BDE860DE1D2F5E63000D436B /* orderingDetailsHeadView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = orderingDetailsHeadView.xib; sourceTree = "<group>"; };
+		BDE860E01D2F89AD000D436B /* orderingDetailsHeadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = orderingDetailsHeadView.h; sourceTree = "<group>"; };
+		BDE860E11D2F89AD000D436B /* orderingDetailsHeadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = orderingDetailsHeadView.m; sourceTree = "<group>"; };
+		BDE860E31D3096CC000D436B /* ZROrdeingCarteCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZROrdeingCarteCell.h; sourceTree = "<group>"; };
+		BDE860E41D3096CC000D436B /* ZROrdeingCarteCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZROrdeingCarteCell.m; sourceTree = "<group>"; };
+		BDE860E71D30A1A2000D436B /* UIButton+ZRButtonColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+ZRButtonColor.h"; sourceTree = "<group>"; };
+		BDE860E81D30A1A2000D436B /* UIButton+ZRButtonColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+ZRButtonColor.m"; sourceTree = "<group>"; };
+		BDE860EA1D30A4A7000D436B /* ZRCarteTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZRCarteTableViewCell.h; sourceTree = "<group>"; };
+		BDE860EB1D30A4A7000D436B /* ZRCarteTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZRCarteTableViewCell.m; sourceTree = "<group>"; };
+		BDE860EC1D30A4A7000D436B /* ZRCarteTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZRCarteTableViewCell.xib; sourceTree = "<group>"; };
+		BDE860EF1D30D2FB000D436B /* orderingSectionView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = orderingSectionView.xib; sourceTree = "<group>"; };
+		BDE860F11D30D56C000D436B /* orderingSectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = orderingSectionView.h; sourceTree = "<group>"; };
+		BDE860F21D30D56C000D436B /* orderingSectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = orderingSectionView.m; sourceTree = "<group>"; };
+		BDE860F41D30D8CB000D436B /* ZRBaseOrderingViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZRBaseOrderingViewCell.h; sourceTree = "<group>"; };
+		BDE860F51D30D8CB000D436B /* ZRBaseOrderingViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZRBaseOrderingViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -379,6 +422,8 @@
 			children = (
 				BD7FCB2D1D2DEF5B0098455E /* ZROrderingController.h */,
 				BD7FCB2E1D2DEF5B0098455E /* ZROrderingController.m */,
+				BDE860DB1D2F5D8E000D436B /* ZROrderingDetailsController.h */,
+				BDE860DC1D2F5D8E000D436B /* ZROrderingDetailsController.m */,
 			);
 			name = "ordering(订餐)";
 			path = ordering;
@@ -393,6 +438,27 @@
 				BD7FCB361D2E20D50098455E /* navTitleView.xib */,
 				BD7FCB381D2E245E0098455E /* navTitleView.h */,
 				BD7FCB391D2E245E0098455E /* navTitleView.m */,
+				BDE860DE1D2F5E63000D436B /* orderingDetailsHeadView.xib */,
+				BDE860E01D2F89AD000D436B /* orderingDetailsHeadView.h */,
+				BDE860E11D2F89AD000D436B /* orderingDetailsHeadView.m */,
+				BDE860E31D3096CC000D436B /* ZROrdeingCarteCell.h */,
+				BDE860E41D3096CC000D436B /* ZROrdeingCarteCell.m */,
+				BDE860EA1D30A4A7000D436B /* ZRCarteTableViewCell.h */,
+				BDE860EB1D30A4A7000D436B /* ZRCarteTableViewCell.m */,
+				BDE860EC1D30A4A7000D436B /* ZRCarteTableViewCell.xib */,
+				BDE860EF1D30D2FB000D436B /* orderingSectionView.xib */,
+				BDE860F11D30D56C000D436B /* orderingSectionView.h */,
+				BDE860F21D30D56C000D436B /* orderingSectionView.m */,
+				BDE860F41D30D8CB000D436B /* ZRBaseOrderingViewCell.h */,
+				BDE860F51D30D8CB000D436B /* ZRBaseOrderingViewCell.m */,
+				BD0D17B41D34C83B00AC688A /* ZROrderingComment.xib */,
+				BD0D17B61D34D05F00AC688A /* ZROrderingComment.h */,
+				BD0D17B71D34D05F00AC688A /* ZROrderingComment.m */,
+				BD0D17B91D34D61300AC688A /* ZROrderingCommentCell.h */,
+				BD0D17BA1D34D61300AC688A /* ZROrderingCommentCell.m */,
+				BD0D17BB1D34D61300AC688A /* ZROrderingCommentCell.xib */,
+				BD0D17BE1D34E9C300AC688A /* ZRCommentCell.h */,
+				BD0D17BF1D34E9C300AC688A /* ZRCommentCell.m */,
 			);
 			name = "orderingView(订餐)";
 			path = orderingView;
@@ -546,6 +612,7 @@
 		BDB542C11D1B7E300019C34D /* Categorys */ = {
 			isa = PBXGroup;
 			children = (
+				BDE860E61D30A17C000D436B /* UIButton */,
 				A31EAC921D2E3E89004FD2B6 /* UIView */,
 				A31EAC971D2E3E89004FD2B6 /* NSString */,
 				BD4FEFDB1D23C6EA0040D240 /* UINavigationBar */,
@@ -736,9 +803,20 @@
 		BDE860D71D2F4DA9000D436B /* beauty(丽人) */ = {
 			isa = PBXGroup;
 			children = (
+				BDE860D81D2F4F8D000D436B /* ZRBeautyController.h */,
+				BDE860D91D2F4F8D000D436B /* ZRBeautyController.m */,
 			);
 			name = "beauty(丽人)";
 			path = beauty;
+			sourceTree = "<group>";
+		};
+		BDE860E61D30A17C000D436B /* UIButton */ = {
+			isa = PBXGroup;
+			children = (
+				BDE860E71D30A1A2000D436B /* UIButton+ZRButtonColor.h */,
+				BDE860E81D30A1A2000D436B /* UIButton+ZRButtonColor.m */,
+			);
+			path = UIButton;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -850,13 +928,18 @@
 			files = (
 				BD1CA8051D2371570005EF92 /* placeHoder.jpg in Resources */,
 				BD4FEFE61D24C01E0040D240 /* ZRHomeCellOne.xib in Resources */,
+				BDE860EE1D30A4A7000D436B /* ZRCarteTableViewCell.xib in Resources */,
 				BD4FEFEB1D24CA3E0040D240 /* ZRHomeCellTwo.xib in Resources */,
 				BDB542241D1A7A440019C34D /* LaunchScreen.storyboard in Resources */,
+				BD0D17BD1D34D61300AC688A /* ZROrderingCommentCell.xib in Resources */,
 				BD7FCB351D2DFA820098455E /* ZROrdeingCell.xib in Resources */,
 				BD7FCB401D2E2A130098455E /* ZRGroupBuyingCell.xib in Resources */,
 				BDE860D51D2F4653000D436B /* ZREntertainmentCell.xib in Resources */,
 				BDB542211D1A7A440019C34D /* Assets.xcassets in Resources */,
 				BD7FCB371D2E20D50098455E /* navTitleView.xib in Resources */,
+				BDE860F01D30D2FB000D436B /* orderingSectionView.xib in Resources */,
+				BD0D17B51D34C83B00AC688A /* ZROrderingComment.xib in Resources */,
+				BDE860DF1D2F5E63000D436B /* orderingDetailsHeadView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -932,24 +1015,31 @@
 				BD7FCB3A1D2E245E0098455E /* navTitleView.m in Sources */,
 				A31EAC901D2E3DF9004FD2B6 /* ZRImmediatelyExchangeCell.m in Sources */,
 				A31EAC871D2E3DF9004FD2B6 /* ZRDiscoveryController.m in Sources */,
+				BD0D17B81D34D05F00AC688A /* ZROrderingComment.m in Sources */,
 				A31EAC8D1D2E3DF9004FD2B6 /* ZRIntegralMallCell.m in Sources */,
 				A31EAC9C1D2E3E89004FD2B6 /* NSString+ZRString.m in Sources */,
 				BD4FEFDE1D23C7220040D240 /* UINavigationBar+ZRAwesome.m in Sources */,
 				BDB542E21D1BA7CA0019C34D /* UIBarButtonItem+Item.m in Sources */,
 				A31EAC9A1D2E3E89004FD2B6 /* UIView+Extension.m in Sources */,
 				BDB542EB1D1BAA750019C34D /* ZRMyPageController.m in Sources */,
+				BDE860E51D3096CC000D436B /* ZROrdeingCarteCell.m in Sources */,
+				BDE860DA1D2F4F8D000D436B /* ZRBeautyController.m in Sources */,
 				BD7FCB3F1D2E2A130098455E /* ZRGroupBuyingCell.m in Sources */,
 				BDD7A5D81D27B84900373338 /* ZRTableVIewHeadView.m in Sources */,
 				BDB542191D1A7A440019C34D /* AppDelegate.m in Sources */,
 				BD4FEFE51D24C01E0040D240 /* ZRHomeCellOne.m in Sources */,
+				BDE860E91D30A1A2000D436B /* UIButton+ZRButtonColor.m in Sources */,
 				BDB542161D1A7A440019C34D /* main.m in Sources */,
 				A31EAC911D2E3DF9004FD2B6 /* ZRIntegralMallFrame.m in Sources */,
 				A31EAC8E1D2E3DF9004FD2B6 /* ZRRecommentHeader.m in Sources */,
 				BD4FEFE11D23D24E0040D240 /* ZRSearchView.m in Sources */,
 				BD1CA8041D2371570005EF92 /* AdView.m in Sources */,
+				BDE860E21D2F89AD000D436B /* orderingDetailsHeadView.m in Sources */,
+				BDE860F61D30D8CB000D436B /* ZRBaseOrderingViewCell.m in Sources */,
 				A31EAC9B1D2E3E89004FD2B6 /* UIView+ZRDraw.m in Sources */,
 				A31EAC891D2E3DF9004FD2B6 /* ZRImmediatelyExchangeController.m in Sources */,
 				BDD7A5E21D2B436100373338 /* ZRLookForTasteController.m in Sources */,
+				BD0D17C01D34E9C300AC688A /* ZRCommentCell.m in Sources */,
 				BDB542DE1D1BA5520019C34D /* MyControl.m in Sources */,
 				A31EAC8B1D2E3DF9004FD2B6 /* ZRDiscoveryCell.m in Sources */,
 				BD1CA8081D2371A70005EF92 /* ZRHomeHeadView.m in Sources */,
@@ -959,12 +1049,16 @@
 				BDB542C81D1B824A0019C34D /* ZRTabBarButton.m in Sources */,
 				BDB542501D1A7F620019C34D /* ZRTabBarViewController.m in Sources */,
 				A31EAC8A1D2E3DF9004FD2B6 /* ZRColletionViewLayout.m in Sources */,
+				BDE860ED1D30A4A7000D436B /* ZRCarteTableViewCell.m in Sources */,
+				BDE860DD1D2F5D8E000D436B /* ZROrderingDetailsController.m in Sources */,
 				BDB542561D1A84B70019C34D /* ZRTabBar.m in Sources */,
 				BDD7A5E91D2CDF0F00373338 /* ZRScreeningView.m in Sources */,
+				BDE860F31D30D56C000D436B /* orderingSectionView.m in Sources */,
 				BDD7A5DE1D2B3E3100373338 /* ZRQueryView.m in Sources */,
 				BDE860CC1D2E4E86000D436B /* ZRHomeBaseViewController.m in Sources */,
 				BDD7A5D41D27B76C00373338 /* ZRHomeController.m in Sources */,
 				A31EAC8F1D2E3DF9004FD2B6 /* ZRSegmentView.m in Sources */,
+				BD0D17BC1D34D61300AC688A /* ZROrderingCommentCell.m in Sources */,
 				BD4FEFEA1D24CA3E0040D240 /* ZRHomeCellTwo.m in Sources */,
 				BDD7A5E61D2BA03700373338 /* ZRGroupBuyingController.m in Sources */,
 				BDB542531D1A81770019C34D /* ZRNavigationController.m in Sources */,

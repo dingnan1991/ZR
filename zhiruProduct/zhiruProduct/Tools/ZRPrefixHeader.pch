@@ -17,8 +17,8 @@
 #import "UIBarButtonItem+Item.h"
 #import "ZRBaseViewController.h"
 #import "UIImageView+WebCache.h"
-
-
+#import "UINavigationBar+ZRAwesome.h"
+#import "UIButton+ZRButtonColor.h"
 #import "NSString+ZRString.h"
 #import "UIView+ZRDraw.h"
 
@@ -147,6 +147,7 @@ alpha:1.0]
 
 #define kClearColor [UIColor clearColor]
 #define ZRBackgroundColor R_G_B_16(0xf0f0f0)
+#define NAVCOLOR [UIColor colorWithRed:250/255.0 green:250/255.0 blue:250/255.0 alpha:1]
 
 #define COLOR_BLUE_             UIColorFromRGB(0x41CEF2)
 #define COLOR_GRAY_             UIColorFromRGB(0xababab) //171
