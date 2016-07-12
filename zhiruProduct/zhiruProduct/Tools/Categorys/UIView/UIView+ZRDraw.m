@@ -21,7 +21,7 @@
 {
     NSMutableParagraphStyle* paragraphStyle = [[NSParagraphStyle defaultParagraphStyle] mutableCopy];
     paragraphStyle.lineBreakMode = NSLineBreakByCharWrapping;
-    paragraphStyle.alignment=NSTextAlignmentCenter;//文字居中
+    //paragraphStyle.alignment=NSTextAlignmentCenter;//文字居中
     NSDictionary* attribute1 = @{
                                  NSForegroundColorAttributeName:color,//设置文字颜色
                                  NSFontAttributeName:font,//设置文字的字体
@@ -43,6 +43,35 @@
     return size1;
     
 }
+
+
+- (CGSize)drawWithStr:(NSString *)str Font:(UIFont *)font Color:(UIColor *)color Point:(CGPoint)point Size:(CGSize)size
+{
+    NSMutableParagraphStyle* paragraphStyle = [[NSParagraphStyle defaultParagraphStyle] mutableCopy];
+    paragraphStyle.lineBreakMode = NSLineBreakByCharWrapping;
+    //paragraphStyle.alignment=NSTextAlignmentCenter;//文字居中
+    NSDictionary* attribute1 = @{
+                                 NSForegroundColorAttributeName:color,//设置文字颜色
+                                 NSFontAttributeName:font,//设置文字的字体
+                                 NSParagraphStyleAttributeName:paragraphStyle,//设置文字的样式
+                                 };
+    CGSize size1 = [str boundingRectWithSize:size
+                                     options:NSStringDrawingUsesLineFragmentOrigin
+                                  attributes:@{
+                                               NSFontAttributeName:font,//设置文字的字体
+                                               NSKernAttributeName:@0,//文字之间的字距
+                                               }
+                                     context:nil].size;
+    CGRect rect1 = CGRectMake(point.x, point.y, size1.width, size1.height);
+    [str drawInRect:rect1 withAttributes:attribute1];
+    
+    
+    
+    
+    return size1;
+    
+}
+
 
 
 /**

@@ -14,9 +14,14 @@
 #import "ZRHomeCellTwo.h"
 #import "ZRLookForTasteController.h"
 #import "ZROrderingController.h"
+#import "ZRSupermarketController.h"
 #import "ZRGroupBuyingController.h"
 #import "ZREntertainmentController.h"
+
 #import "ZRBeautyController.h"
+
+
+#import "ZRTravelViewController.h"
 
 #define NAVBAR_CHANGE_POINT 50
 
@@ -81,6 +86,7 @@
                     [ws.navigationController pushViewController:entertainmentVC animated:YES];
                 }
                     break;
+
                 case 4:
                 {
                     ZRBeautyController * beautyVC = [[ZRBeautyController alloc] initWithTitleArr:@[@"美发",@"美甲",@"美容",@"纤体"] andScreeningDict:@{@"地理":@[@"1000",@"2000",@"3000",@"4000"],@"品类":@[@"200",@"300"],@"排序":@[@"900",@"1000",@"2300"]} andQueryTitleArr:@[@"地理",@"品类",@"排序",@"筛选"]];
@@ -88,9 +94,24 @@
                     [ws.navigationController pushViewController:beautyVC animated:YES];
                 }
                     break;
+                case 5:
+                {
+                    ZRTravelViewController * travelVC = [[ZRTravelViewController alloc] init];
+                    [ws.navigationController pushViewController:travelVC animated:YES];
+                }
+                    break;
+                    
+                case 6:
+                {
+                    ZRSupermarketController * supermarketVC = [[ZRSupermarketController alloc] init];
+                    [ws.navigationController pushViewController:supermarketVC animated:YES];
+
+                }
+                    break;
                 default:
                     break;
             }
+            
         };
         
         homeTableView.tableHeaderView = headView;
