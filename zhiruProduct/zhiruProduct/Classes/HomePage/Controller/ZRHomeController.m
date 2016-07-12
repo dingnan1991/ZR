@@ -8,7 +8,7 @@
 
 #import "ZRHomeController.h"
 #import "ZRHomeHeadView.h"
-#import "UINavigationBar+ZRAwesome.h"
+
 #import "ZRSearchView.h"
 #import "ZRHomeCellOne.h"
 #import "ZRHomeCellTwo.h"
@@ -17,9 +17,14 @@
 #import "ZRSupermarketController.h"
 #import "ZRGroupBuyingController.h"
 #import "ZREntertainmentController.h"
+
+#import "ZRBeautyController.h"
+
+
 #import "ZRTravelViewController.h"
+
 #define NAVBAR_CHANGE_POINT 50
-#define NAVCOLOR [UIColor colorWithRed:250/255.0 green:250/255.0 blue:250/255.0 alpha:1]
+
 @interface ZRHomeController ()<UITableViewDelegate,UITableViewDataSource>
 
 @property (nonatomic , weak) UITableView * homeTableView;
@@ -81,6 +86,14 @@
                     [ws.navigationController pushViewController:entertainmentVC animated:YES];
                 }
                     break;
+
+                case 4:
+                {
+                    ZRBeautyController * beautyVC = [[ZRBeautyController alloc] initWithTitleArr:@[@"美发",@"美甲",@"美容",@"纤体"] andScreeningDict:@{@"地理":@[@"1000",@"2000",@"3000",@"4000"],@"品类":@[@"200",@"300"],@"排序":@[@"900",@"1000",@"2300"]} andQueryTitleArr:@[@"地理",@"品类",@"排序",@"筛选"]];
+                    beautyVC.title = @"丽人";
+                    [ws.navigationController pushViewController:beautyVC animated:YES];
+                }
+                    break;
                 case 5:
                 {
                     ZRTravelViewController * travelVC = [[ZRTravelViewController alloc] init];
@@ -92,6 +105,7 @@
                 {
                     ZRSupermarketController * supermarketVC = [[ZRSupermarketController alloc] init];
                     [ws.navigationController pushViewController:supermarketVC animated:YES];
+
                 }
                     break;
                 default:
