@@ -126,6 +126,20 @@ static NSString *footerID = @"footerID";
         {
             ZRSupermarketHomeController *supermarketHomeVC = [[ZRSupermarketHomeController alloc] init];
             [self.navigationController pushViewController:supermarketHomeVC animated:YES];
+            
+            supermarketHomeVC.style = CheckAllCategory;
+            
+            
+        }
+            break;
+            
+            
+        case kSuperMarket_LatestDiscount_CheckAll:
+        {
+            ZRSupermarketHomeController *supermarketHomeVC = [[ZRSupermarketHomeController alloc] init];
+            [self.navigationController pushViewController:supermarketHomeVC animated:YES];
+            
+            supermarketHomeVC.style = LatestDiscountCheckAllCategory;
         }
             break;
             

@@ -8,6 +8,20 @@
 
 #import "ZRBaseViewController.h"
 
+
+typedef NS_ENUM(NSInteger, CategoryStyle){
+    CheckAllCategory,
+    LatestDiscountCheckAllCategory,
+    Liangyoufushi,
+    Xiuxianlingshi,
+    Huoguojingxuan,
+    Niunaiguozhi
+    
+};
+
 @interface ZRSupermarketHomeController : ZRBaseViewController
+
+
+@property (nonatomic, assign) CategoryStyle style;
 
 @end

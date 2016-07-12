@@ -8,6 +8,7 @@
 
 #import "ZRSupermarketController.h"
 #import "ZRSupermarketCell.h"
+#import "ZRSupermarketHomeController.h"
 
 @interface ZRSupermarketController ()
 
@@ -208,31 +209,35 @@ static NSString *footerID = @"footerID";
  */
 - (void)categoryBtnClick:(UIButton *)sender
 {
+    ZRSupermarketHomeController *supermarketHomeVC = [[ZRSupermarketHomeController alloc] init];
     switch (sender.tag) {
         case kSuperMarket_Category1:
         {
-            
+            supermarketHomeVC.style = Liangyoufushi;
         }
             break;
         case kSuperMarket_Category2:
         {
-            
+            supermarketHomeVC.style = Xiuxianlingshi;
         }
             break;
         case kSuperMarket_Category3:
         {
-            
+            supermarketHomeVC.style = Huoguojingxuan;
         }
             break;
         case kSuperMarket_Category4:
         {
-            
+            supermarketHomeVC.style = Niunaiguozhi;
         }
             break;
             
         default:
             break;
     }
+    
+    
+    [self.navigationController pushViewController:supermarketHomeVC animated:YES];
 }
 
 
