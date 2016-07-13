@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ZRMyPageController : UITableViewController
+@interface ZRMyPageController : ZRBaseViewController
 
 @end

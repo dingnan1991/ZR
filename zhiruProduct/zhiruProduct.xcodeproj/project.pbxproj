@@ -7,6 +7,30 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E2CD8C31D2F41FB00618444 /* ZRMyPageHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E2CD8C21D2F41FB00618444 /* ZRMyPageHeaderView.m */; };
+		2E2CD8C61D2F422800618444 /* ZRMyPageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E2CD8C51D2F422800618444 /* ZRMyPageTableViewCell.m */; };
+		2E2CD8C91D2F6E9C00618444 /* ZRMyPageContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E2CD8C81D2F6E9C00618444 /* ZRMyPageContentView.m */; };
+		2E63200E1D34E94200DB5BC3 /* ZRAddressTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E63200D1D34E94200DB5BC3 /* ZRAddressTableViewCell.m */; };
+		2E6320111D3527FF00DB5BC3 /* ZRAddView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E6320101D3527FF00DB5BC3 /* ZRAddView.m */; };
+		2E6320141D352F0800DB5BC3 /* ZRNewAddressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E6320131D352F0800DB5BC3 /* ZRNewAddressViewController.m */; };
+		2E6320171D35324400DB5BC3 /* ZRNewAddressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E6320161D35324400DB5BC3 /* ZRNewAddressView.m */; };
+		2E63201A1D353BE600DB5BC3 /* ZRSelectSexView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E6320191D353BE600DB5BC3 /* ZRSelectSexView.m */; };
+		2EC22E261D30953D00CC7685 /* ZRStringWithLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EC22E251D30953D00CC7685 /* ZRStringWithLabel.m */; };
+		2EEB55051D334994004C5E8C /* ZRAgreementViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EEB54F51D334994004C5E8C /* ZRAgreementViewController.m */; };
+		2EEB55061D334994004C5E8C /* ZRForgetPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EEB54F81D334994004C5E8C /* ZRForgetPasswordViewController.m */; };
+		2EEB55071D334994004C5E8C /* ZRLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EEB54FB1D334994004C5E8C /* ZRLoginViewController.m */; };
+		2EEB55081D334994004C5E8C /* ZRRegionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EEB54FE1D334994004C5E8C /* ZRRegionViewController.m */; };
+		2EEB55091D334994004C5E8C /* ZRRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EEB55011D334994004C5E8C /* ZRRegisterViewController.m */; };
+		2EEB550A1D334994004C5E8C /* ZRSettingPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EEB55041D334994004C5E8C /* ZRSettingPasswordViewController.m */; };
+		2EEB55161D335273004C5E8C /* ZRLoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EEB550E1D335273004C5E8C /* ZRLoginView.m */; };
+		2EEB55171D335273004C5E8C /* ZRCaptchaView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EEB55111D335273004C5E8C /* ZRCaptchaView.m */; };
+		2EEB55181D335273004C5E8C /* ZRRegisterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EEB55131D335273004C5E8C /* ZRRegisterView.m */; };
+		2EEB55191D335273004C5E8C /* ZRUserAgreementView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EEB55151D335273004C5E8C /* ZRUserAgreementView.m */; };
+		2EEB551E1D3360D0004C5E8C /* ZRUserInformationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EEB551D1D3360D0004C5E8C /* ZRUserInformationViewController.m */; };
+		2EEB55261D3368FB004C5E8C /* ZRHeadImageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EEB55251D3368FB004C5E8C /* ZRHeadImageTableViewCell.m */; };
+		2EEB55291D33691E004C5E8C /* ZRUserContentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EEB55281D33691E004C5E8C /* ZRUserContentTableViewCell.m */; };
+		2EEB552D1D338E56004C5E8C /* ZRNameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EEB552C1D338E56004C5E8C /* ZRNameViewController.m */; };
+		2EEB55311D33A2B4004C5E8C /* ZRAddressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EEB55301D33A2B4004C5E8C /* ZRAddressViewController.m */; };
 		6F9C1493FC4B81CBBBA16E4E /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EB508ED8ADB95154FACBBB8 /* libPods.a */; };
 		A31EAC871D2E3DF9004FD2B6 /* ZRDiscoveryController.m in Sources */ = {isa = PBXBuildFile; fileRef = A31EAC6B1D2E3DF9004FD2B6 /* ZRDiscoveryController.m */; };
 		A31EAC881D2E3DF9004FD2B6 /* ZRProductDetalController.m in Sources */ = {isa = PBXBuildFile; fileRef = A31EAC6E1D2E3DF9004FD2B6 /* ZRProductDetalController.m */; };
@@ -79,6 +103,54 @@
 
 /* Begin PBXFileReference section */
 		10D08A74F0663F053FB0868F /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		2E2CD8C11D2F41FB00618444 /* ZRMyPageHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZRMyPageHeaderView.h; sourceTree = "<group>"; };
+		2E2CD8C21D2F41FB00618444 /* ZRMyPageHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZRMyPageHeaderView.m; sourceTree = "<group>"; };
+		2E2CD8C41D2F422800618444 /* ZRMyPageTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZRMyPageTableViewCell.h; sourceTree = "<group>"; };
+		2E2CD8C51D2F422800618444 /* ZRMyPageTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZRMyPageTableViewCell.m; sourceTree = "<group>"; };
+		2E2CD8C71D2F6E9C00618444 /* ZRMyPageContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZRMyPageContentView.h; sourceTree = "<group>"; };
+		2E2CD8C81D2F6E9C00618444 /* ZRMyPageContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZRMyPageContentView.m; sourceTree = "<group>"; };
+		2E63200C1D34E94200DB5BC3 /* ZRAddressTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZRAddressTableViewCell.h; sourceTree = "<group>"; };
+		2E63200D1D34E94200DB5BC3 /* ZRAddressTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZRAddressTableViewCell.m; sourceTree = "<group>"; };
+		2E63200F1D3527FF00DB5BC3 /* ZRAddView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZRAddView.h; sourceTree = "<group>"; };
+		2E6320101D3527FF00DB5BC3 /* ZRAddView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZRAddView.m; sourceTree = "<group>"; };
+		2E6320121D352F0800DB5BC3 /* ZRNewAddressViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZRNewAddressViewController.h; sourceTree = "<group>"; };
+		2E6320131D352F0800DB5BC3 /* ZRNewAddressViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZRNewAddressViewController.m; sourceTree = "<group>"; };
+		2E6320151D35324400DB5BC3 /* ZRNewAddressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZRNewAddressView.h; sourceTree = "<group>"; };
+		2E6320161D35324400DB5BC3 /* ZRNewAddressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZRNewAddressView.m; sourceTree = "<group>"; };
+		2E6320181D353BE600DB5BC3 /* ZRSelectSexView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZRSelectSexView.h; sourceTree = "<group>"; };
+		2E6320191D353BE600DB5BC3 /* ZRSelectSexView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZRSelectSexView.m; sourceTree = "<group>"; };
+		2EC22E241D30953D00CC7685 /* ZRStringWithLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZRStringWithLabel.h; sourceTree = "<group>"; };
+		2EC22E251D30953D00CC7685 /* ZRStringWithLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZRStringWithLabel.m; sourceTree = "<group>"; };
+		2EEB54F41D334994004C5E8C /* ZRAgreementViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZRAgreementViewController.h; sourceTree = "<group>"; };
+		2EEB54F51D334994004C5E8C /* ZRAgreementViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZRAgreementViewController.m; sourceTree = "<group>"; };
+		2EEB54F71D334994004C5E8C /* ZRForgetPasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZRForgetPasswordViewController.h; sourceTree = "<group>"; };
+		2EEB54F81D334994004C5E8C /* ZRForgetPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZRForgetPasswordViewController.m; sourceTree = "<group>"; };
+		2EEB54FA1D334994004C5E8C /* ZRLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZRLoginViewController.h; sourceTree = "<group>"; };
+		2EEB54FB1D334994004C5E8C /* ZRLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZRLoginViewController.m; sourceTree = "<group>"; };
+		2EEB54FD1D334994004C5E8C /* ZRRegionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZRRegionViewController.h; sourceTree = "<group>"; };
+		2EEB54FE1D334994004C5E8C /* ZRRegionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZRRegionViewController.m; sourceTree = "<group>"; };
+		2EEB55001D334994004C5E8C /* ZRRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZRRegisterViewController.h; sourceTree = "<group>"; };
+		2EEB55011D334994004C5E8C /* ZRRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZRRegisterViewController.m; sourceTree = "<group>"; };
+		2EEB55031D334994004C5E8C /* ZRSettingPasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZRSettingPasswordViewController.h; sourceTree = "<group>"; };
+		2EEB55041D334994004C5E8C /* ZRSettingPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZRSettingPasswordViewController.m; sourceTree = "<group>"; };
+		2EEB550D1D335273004C5E8C /* ZRLoginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZRLoginView.h; sourceTree = "<group>"; };
+		2EEB550E1D335273004C5E8C /* ZRLoginView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZRLoginView.m; sourceTree = "<group>"; };
+		2EEB55101D335273004C5E8C /* ZRCaptchaView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZRCaptchaView.h; sourceTree = "<group>"; };
+		2EEB55111D335273004C5E8C /* ZRCaptchaView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZRCaptchaView.m; sourceTree = "<group>"; };
+		2EEB55121D335273004C5E8C /* ZRRegisterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZRRegisterView.h; sourceTree = "<group>"; };
+		2EEB55131D335273004C5E8C /* ZRRegisterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZRRegisterView.m; sourceTree = "<group>"; };
+		2EEB55141D335273004C5E8C /* ZRUserAgreementView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZRUserAgreementView.h; sourceTree = "<group>"; };
+		2EEB55151D335273004C5E8C /* ZRUserAgreementView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZRUserAgreementView.m; sourceTree = "<group>"; };
+		2EEB551C1D3360D0004C5E8C /* ZRUserInformationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZRUserInformationViewController.h; sourceTree = "<group>"; };
+		2EEB551D1D3360D0004C5E8C /* ZRUserInformationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZRUserInformationViewController.m; sourceTree = "<group>"; };
+		2EEB55241D3368FB004C5E8C /* ZRHeadImageTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZRHeadImageTableViewCell.h; sourceTree = "<group>"; };
+		2EEB55251D3368FB004C5E8C /* ZRHeadImageTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZRHeadImageTableViewCell.m; sourceTree = "<group>"; };
+		2EEB55271D33691E004C5E8C /* ZRUserContentTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZRUserContentTableViewCell.h; sourceTree = "<group>"; };
+		2EEB55281D33691E004C5E8C /* ZRUserContentTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZRUserContentTableViewCell.m; sourceTree = "<group>"; };
+		2EEB552B1D338E56004C5E8C /* ZRNameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZRNameViewController.h; sourceTree = "<group>"; };
+		2EEB552C1D338E56004C5E8C /* ZRNameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZRNameViewController.m; sourceTree = "<group>"; };
+		2EEB552F1D33A2B4004C5E8C /* ZRAddressViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZRAddressViewController.h; sourceTree = "<group>"; };
+		2EEB55301D33A2B4004C5E8C /* ZRAddressViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZRAddressViewController.m; sourceTree = "<group>"; };
 		5DD92B5917BE36B7A724ACD8 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		5EB508ED8ADB95154FACBBB8 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		A31EAC6A1D2E3DF9004FD2B6 /* ZRDiscoveryController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZRDiscoveryController.h; sourceTree = "<group>"; };
@@ -211,6 +283,202 @@
 				5EB508ED8ADB95154FACBBB8 /* libPods.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2E2CD8C01D2F41E200618444 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2EEB550B1D335273004C5E8C /* LoginRegisterView */,
+				2EEB551F1D3364B5004C5E8C /* UserInformationView */,
+				2E63200B1D34E92600DB5BC3 /* AddressView */,
+				2E2CD8C11D2F41FB00618444 /* ZRMyPageHeaderView.h */,
+				2E2CD8C21D2F41FB00618444 /* ZRMyPageHeaderView.m */,
+				2E2CD8C71D2F6E9C00618444 /* ZRMyPageContentView.h */,
+				2E2CD8C81D2F6E9C00618444 /* ZRMyPageContentView.m */,
+				2E2CD8C41D2F422800618444 /* ZRMyPageTableViewCell.h */,
+				2E2CD8C51D2F422800618444 /* ZRMyPageTableViewCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2E63200B1D34E92600DB5BC3 /* AddressView */ = {
+			isa = PBXGroup;
+			children = (
+				2E63200C1D34E94200DB5BC3 /* ZRAddressTableViewCell.h */,
+				2E63200D1D34E94200DB5BC3 /* ZRAddressTableViewCell.m */,
+				2E63200F1D3527FF00DB5BC3 /* ZRAddView.h */,
+				2E6320101D3527FF00DB5BC3 /* ZRAddView.m */,
+				2E6320151D35324400DB5BC3 /* ZRNewAddressView.h */,
+				2E6320161D35324400DB5BC3 /* ZRNewAddressView.m */,
+				2E6320181D353BE600DB5BC3 /* ZRSelectSexView.h */,
+				2E6320191D353BE600DB5BC3 /* ZRSelectSexView.m */,
+			);
+			path = AddressView;
+			sourceTree = "<group>";
+		};
+		2EC22E231D30951600CC7685 /* StringWithLabel */ = {
+			isa = PBXGroup;
+			children = (
+				2EC22E241D30953D00CC7685 /* ZRStringWithLabel.h */,
+				2EC22E251D30953D00CC7685 /* ZRStringWithLabel.m */,
+			);
+			path = StringWithLabel;
+			sourceTree = "<group>";
+		};
+		2EEB54F21D334994004C5E8C /* LoginRegister */ = {
+			isa = PBXGroup;
+			children = (
+				2EEB54F31D334994004C5E8C /* Agreement */,
+				2EEB54F61D334994004C5E8C /* ForgetPassword */,
+				2EEB54F91D334994004C5E8C /* LoginViewController */,
+				2EEB54FC1D334994004C5E8C /* Region */,
+				2EEB54FF1D334994004C5E8C /* RegisterViewController */,
+				2EEB55021D334994004C5E8C /* SettingPassword */,
+			);
+			path = LoginRegister;
+			sourceTree = "<group>";
+		};
+		2EEB54F31D334994004C5E8C /* Agreement */ = {
+			isa = PBXGroup;
+			children = (
+				2EEB54F41D334994004C5E8C /* ZRAgreementViewController.h */,
+				2EEB54F51D334994004C5E8C /* ZRAgreementViewController.m */,
+			);
+			path = Agreement;
+			sourceTree = "<group>";
+		};
+		2EEB54F61D334994004C5E8C /* ForgetPassword */ = {
+			isa = PBXGroup;
+			children = (
+				2EEB54F71D334994004C5E8C /* ZRForgetPasswordViewController.h */,
+				2EEB54F81D334994004C5E8C /* ZRForgetPasswordViewController.m */,
+			);
+			path = ForgetPassword;
+			sourceTree = "<group>";
+		};
+		2EEB54F91D334994004C5E8C /* LoginViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2EEB54FA1D334994004C5E8C /* ZRLoginViewController.h */,
+				2EEB54FB1D334994004C5E8C /* ZRLoginViewController.m */,
+			);
+			path = LoginViewController;
+			sourceTree = "<group>";
+		};
+		2EEB54FC1D334994004C5E8C /* Region */ = {
+			isa = PBXGroup;
+			children = (
+				2EEB54FD1D334994004C5E8C /* ZRRegionViewController.h */,
+				2EEB54FE1D334994004C5E8C /* ZRRegionViewController.m */,
+			);
+			path = Region;
+			sourceTree = "<group>";
+		};
+		2EEB54FF1D334994004C5E8C /* RegisterViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2EEB55001D334994004C5E8C /* ZRRegisterViewController.h */,
+				2EEB55011D334994004C5E8C /* ZRRegisterViewController.m */,
+			);
+			path = RegisterViewController;
+			sourceTree = "<group>";
+		};
+		2EEB55021D334994004C5E8C /* SettingPassword */ = {
+			isa = PBXGroup;
+			children = (
+				2EEB55031D334994004C5E8C /* ZRSettingPasswordViewController.h */,
+				2EEB55041D334994004C5E8C /* ZRSettingPasswordViewController.m */,
+			);
+			path = SettingPassword;
+			sourceTree = "<group>";
+		};
+		2EEB550B1D335273004C5E8C /* LoginRegisterView */ = {
+			isa = PBXGroup;
+			children = (
+				2EEB550C1D335273004C5E8C /* LoginView */,
+				2EEB550F1D335273004C5E8C /* RegisterView */,
+			);
+			path = LoginRegisterView;
+			sourceTree = "<group>";
+		};
+		2EEB550C1D335273004C5E8C /* LoginView */ = {
+			isa = PBXGroup;
+			children = (
+				2EEB550D1D335273004C5E8C /* ZRLoginView.h */,
+				2EEB550E1D335273004C5E8C /* ZRLoginView.m */,
+			);
+			path = LoginView;
+			sourceTree = "<group>";
+		};
+		2EEB550F1D335273004C5E8C /* RegisterView */ = {
+			isa = PBXGroup;
+			children = (
+				2EEB55101D335273004C5E8C /* ZRCaptchaView.h */,
+				2EEB55111D335273004C5E8C /* ZRCaptchaView.m */,
+				2EEB55121D335273004C5E8C /* ZRRegisterView.h */,
+				2EEB55131D335273004C5E8C /* ZRRegisterView.m */,
+				2EEB55141D335273004C5E8C /* ZRUserAgreementView.h */,
+				2EEB55151D335273004C5E8C /* ZRUserAgreementView.m */,
+			);
+			path = RegisterView;
+			sourceTree = "<group>";
+		};
+		2EEB551A1D335326004C5E8C /* UserInformation */ = {
+			isa = PBXGroup;
+			children = (
+				2EEB551B1D3353CE004C5E8C /* UserDetailInformation */,
+				2EEB552A1D338E39004C5E8C /* Name */,
+				2EEB552E1D33A02B004C5E8C /* TakeDeliveryaddress */,
+			);
+			path = UserInformation;
+			sourceTree = "<group>";
+		};
+		2EEB551B1D3353CE004C5E8C /* UserDetailInformation */ = {
+			isa = PBXGroup;
+			children = (
+				2EEB551C1D3360D0004C5E8C /* ZRUserInformationViewController.h */,
+				2EEB551D1D3360D0004C5E8C /* ZRUserInformationViewController.m */,
+			);
+			path = UserDetailInformation;
+			sourceTree = "<group>";
+		};
+		2EEB551F1D3364B5004C5E8C /* UserInformationView */ = {
+			isa = PBXGroup;
+			children = (
+				2EEB55231D3368E1004C5E8C /* UserInformationDetailView */,
+			);
+			path = UserInformationView;
+			sourceTree = "<group>";
+		};
+		2EEB55231D3368E1004C5E8C /* UserInformationDetailView */ = {
+			isa = PBXGroup;
+			children = (
+				2EEB55241D3368FB004C5E8C /* ZRHeadImageTableViewCell.h */,
+				2EEB55251D3368FB004C5E8C /* ZRHeadImageTableViewCell.m */,
+				2EEB55271D33691E004C5E8C /* ZRUserContentTableViewCell.h */,
+				2EEB55281D33691E004C5E8C /* ZRUserContentTableViewCell.m */,
+			);
+			path = UserInformationDetailView;
+			sourceTree = "<group>";
+		};
+		2EEB552A1D338E39004C5E8C /* Name */ = {
+			isa = PBXGroup;
+			children = (
+				2EEB552B1D338E56004C5E8C /* ZRNameViewController.h */,
+				2EEB552C1D338E56004C5E8C /* ZRNameViewController.m */,
+			);
+			path = Name;
+			sourceTree = "<group>";
+		};
+		2EEB552E1D33A02B004C5E8C /* TakeDeliveryaddress */ = {
+			isa = PBXGroup;
+			children = (
+				2EEB552F1D33A2B4004C5E8C /* ZRAddressViewController.h */,
+				2EEB55301D33A2B4004C5E8C /* ZRAddressViewController.m */,
+				2E6320121D352F0800DB5BC3 /* ZRNewAddressViewController.h */,
+				2E6320131D352F0800DB5BC3 /* ZRNewAddressViewController.m */,
+			);
+			path = TakeDeliveryaddress;
 			sourceTree = "<group>";
 		};
 		60081668B49091E0622AA3EF /* Pods */ = {
@@ -494,6 +762,7 @@
 		BDB5424A1D1A7D5A0019C34D /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				2EC22E231D30951600CC7685 /* StringWithLabel */,
 				BDB542DB1D1BA5520019C34D /* MyControl */,
 				BDB542C11D1B7E300019C34D /* Categorys */,
 				BDB542571D1B71E90019C34D /* ZRPrefixHeader.pch */,
@@ -607,7 +876,7 @@
 				BDB542D41D1B88E60019C34D /* Controller */,
 				BDB542D51D1B88E60019C34D /* Model */,
 				BDB542D61D1B88E60019C34D /* Request */,
-				BDB542D71D1B88E60019C34D /* View */,
+				2E2CD8C01D2F41E200618444 /* View */,
 			);
 			name = "MyPage(个人中心)";
 			path = MyPage;
@@ -618,6 +887,8 @@
 			children = (
 				BDB542E91D1BAA750019C34D /* ZRMyPageController.h */,
 				BDB542EA1D1BAA750019C34D /* ZRMyPageController.m */,
+				2EEB54F21D334994004C5E8C /* LoginRegister */,
+				2EEB551A1D335326004C5E8C /* UserInformation */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -634,13 +905,6 @@
 			children = (
 			);
 			path = Request;
-			sourceTree = "<group>";
-		};
-		BDB542D71D1B88E60019C34D /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		BDB542DB1D1BA5520019C34D /* MyControl */ = {
@@ -883,12 +1147,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2EEB550A1D334994004C5E8C /* ZRSettingPasswordViewController.m in Sources */,
+				2E2CD8C61D2F422800618444 /* ZRMyPageTableViewCell.m in Sources */,
 				BD7FCB3A1D2E245E0098455E /* navTitleView.m in Sources */,
+				2E63201A1D353BE600DB5BC3 /* ZRSelectSexView.m in Sources */,
+				2EEB55051D334994004C5E8C /* ZRAgreementViewController.m in Sources */,
 				A31EAC901D2E3DF9004FD2B6 /* ZRImmediatelyExchangeCell.m in Sources */,
 				A31EAC871D2E3DF9004FD2B6 /* ZRDiscoveryController.m in Sources */,
 				A31EAC8D1D2E3DF9004FD2B6 /* ZRIntegralMallCell.m in Sources */,
 				A31EAC9C1D2E3E89004FD2B6 /* NSString+ZRString.m in Sources */,
+				2EEB55191D335273004C5E8C /* ZRUserAgreementView.m in Sources */,
 				BD4FEFDE1D23C7220040D240 /* UINavigationBar+ZRAwesome.m in Sources */,
+				2EEB55081D334994004C5E8C /* ZRRegionViewController.m in Sources */,
 				BDB542E21D1BA7CA0019C34D /* UIBarButtonItem+Item.m in Sources */,
 				A31EAC9A1D2E3E89004FD2B6 /* UIView+Extension.m in Sources */,
 				BDB542EB1D1BAA750019C34D /* ZRMyPageController.m in Sources */,
@@ -896,32 +1166,50 @@
 				BDD7A5D81D27B84900373338 /* ZRTableVIewHeadView.m in Sources */,
 				BDB542191D1A7A440019C34D /* AppDelegate.m in Sources */,
 				BD4FEFE51D24C01E0040D240 /* ZRHomeCellOne.m in Sources */,
+				2E6320111D3527FF00DB5BC3 /* ZRAddView.m in Sources */,
 				BDB542161D1A7A440019C34D /* main.m in Sources */,
 				A31EAC911D2E3DF9004FD2B6 /* ZRIntegralMallFrame.m in Sources */,
 				A31EAC8E1D2E3DF9004FD2B6 /* ZRRecommentHeader.m in Sources */,
+				2EEB55071D334994004C5E8C /* ZRLoginViewController.m in Sources */,
 				BD4FEFE11D23D24E0040D240 /* ZRSearchView.m in Sources */,
 				BD1CA8041D2371570005EF92 /* AdView.m in Sources */,
 				A31EAC9B1D2E3E89004FD2B6 /* UIView+ZRDraw.m in Sources */,
 				A31EAC891D2E3DF9004FD2B6 /* ZRImmediatelyExchangeController.m in Sources */,
 				BDD7A5E21D2B436100373338 /* ZRLookForTasteController.m in Sources */,
+				2E6320141D352F0800DB5BC3 /* ZRNewAddressViewController.m in Sources */,
+				2EEB55161D335273004C5E8C /* ZRLoginView.m in Sources */,
+				2E63200E1D34E94200DB5BC3 /* ZRAddressTableViewCell.m in Sources */,
 				BDB542DE1D1BA5520019C34D /* MyControl.m in Sources */,
+				2EEB551E1D3360D0004C5E8C /* ZRUserInformationViewController.m in Sources */,
+				2EC22E261D30953D00CC7685 /* ZRStringWithLabel.m in Sources */,
 				A31EAC8B1D2E3DF9004FD2B6 /* ZRDiscoveryCell.m in Sources */,
 				BD1CA8081D2371A70005EF92 /* ZRHomeHeadView.m in Sources */,
+				2E2CD8C31D2F41FB00618444 /* ZRMyPageHeaderView.m in Sources */,
 				BD7FCB2F1D2DEF5B0098455E /* ZROrderingController.m in Sources */,
+				2EEB55171D335273004C5E8C /* ZRCaptchaView.m in Sources */,
+				2E2CD8C91D2F6E9C00618444 /* ZRMyPageContentView.m in Sources */,
 				BDB542C81D1B824A0019C34D /* ZRTabBarButton.m in Sources */,
 				BDB542501D1A7F620019C34D /* ZRTabBarViewController.m in Sources */,
 				A31EAC8A1D2E3DF9004FD2B6 /* ZRColletionViewLayout.m in Sources */,
+				2EEB55181D335273004C5E8C /* ZRRegisterView.m in Sources */,
 				BDB542561D1A84B70019C34D /* ZRTabBar.m in Sources */,
+				2EEB55091D334994004C5E8C /* ZRRegisterViewController.m in Sources */,
+				2EEB552D1D338E56004C5E8C /* ZRNameViewController.m in Sources */,
 				BDD7A5E91D2CDF0F00373338 /* ZRScreeningView.m in Sources */,
 				BDD7A5DE1D2B3E3100373338 /* ZRQueryView.m in Sources */,
 				BDD7A5D41D27B76C00373338 /* ZRHomeController.m in Sources */,
 				A31EAC8F1D2E3DF9004FD2B6 /* ZRSegmentView.m in Sources */,
+				2EEB55061D334994004C5E8C /* ZRForgetPasswordViewController.m in Sources */,
 				BD4FEFEA1D24CA3E0040D240 /* ZRHomeCellTwo.m in Sources */,
+				2EEB55261D3368FB004C5E8C /* ZRHeadImageTableViewCell.m in Sources */,
 				BDD7A5E61D2BA03700373338 /* ZRGroupBuyingController.m in Sources */,
+				2EEB55311D33A2B4004C5E8C /* ZRAddressViewController.m in Sources */,
 				BDB542531D1A81770019C34D /* ZRNavigationController.m in Sources */,
 				A31EAC881D2E3DF9004FD2B6 /* ZRProductDetalController.m in Sources */,
+				2E6320171D35324400DB5BC3 /* ZRNewAddressView.m in Sources */,
 				BD7FCB341D2DFA820098455E /* ZROrdeingCell.m in Sources */,
 				BDB542DA1D1BA3C60019C34D /* ZRBaseViewController.m in Sources */,
+				2EEB55291D33691E004C5E8C /* ZRUserContentTableViewCell.m in Sources */,
 				A31EAC8C1D2E3DF9004FD2B6 /* ZRDiscoveryTableCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
