@@ -7,73 +7,41 @@
 //
 
 #import "ZRLookForTasteController.h"
-#import "ZRTableVIewHeadView.h"
-#import "ZRQueryView.h"
 #import "ZRHomeCellTwo.h"
-#import "ZRScreeningView.h"
 
-@interface ZRLookForTasteController ()<UITableViewDelegate,UITableViewDataSource>
-@property (nonatomic , weak) UITableView * LookTableView;
 
-@property (nonatomic , strong) ZRTableVIewHeadView * headView;
+@interface ZRLookForTasteController ()
 
-@property (nonatomic , strong) NSMutableArray * screeningMarr;
-
-@property (nonatomic , strong) ZRQueryView * queryView;
 @end
 
 @implementation ZRLookForTasteController
 
--(NSMutableArray *)screeningMarr{
-    if (_screeningMarr == nil) {
-        _screeningMarr = [NSMutableArray array];
-    }
-    return _screeningMarr;
-}
 
--(UITableView *)LookTableView{
-    if (_LookTableView == nil) {
-        UITableView * LookTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 64, ScreenWidth , ScreenHeight - 64) style:UITableViewStylePlain];
 
-        [self.view addSubview:LookTableView];
-        _LookTableView = LookTableView;
-        LookTableView.backgroundColor = [UIColor clearColor];
-
-        LookTableView.rowHeight = UITableViewAutomaticDimension;
-        LookTableView.estimatedRowHeight = 120.0;
-        
-        ZRTableVIewHeadView * tableViewHeadV = [[ZRTableVIewHeadView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, 191) andTitleArr:@[@"自助",@"烧烤",@"川菜",@"西北菜",@"粤菜",@"东北菜",@"浙江菜",@"简餐"]];
-        
-        LookTableView.tableHeaderView = tableViewHeadV;
-        
-        _LookTableView = LookTableView;
-    }
-    
-    return _LookTableView;
-}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    //加载头视图
-    self.LookTableView.delegate = self;
-    self.LookTableView.dataSource = self;
-    
-    [self createHeadView];
-
 }
 
 #pragma mark - 创建头视图
 - (void)createHeadView{
     
-    for (int i =0; i<4; i++) {
-        ZRScreeningView * screeningView = [[ZRScreeningView alloc] initWithFrame:CGRectMake(0, 104, ScreenWidth, ScreenHeight - 40)andTitleArr:@[@"1000",@"2000",@"3000",@"4000"]];
+
+    for (int i = 0; i < self.ScreeningDict.count; i++) {
+        ZRScreeningView * screeningView = [[ZRScreeningView alloc] initWithFrame:CGRectMake(0, 104, ScreenWidth, ScreenHeight - 40)andTitleArr:self.ScreeningDict[self.queryArr[i]]];
         [self.view addSubview:screeningView];
+        
+//          NSLog(@"%@",dictKey[i]);
+        
+        screeningView.screeningViewClick = ^(NSString * infoStr){
+            NSLog(@"%@",infoStr);
+        };
         
         [self.screeningMarr addObject:screeningView];
     }
     
-
+    
 }
 
 
@@ -98,34 +66,7 @@
     return cellTwo;
 }
 
-- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
-    return 40;
-}
 
-- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
-    
-    ZRQueryView * queryV = [[ZRQueryView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, 40)andTitleArr:@[@"地理",@"品类",@"排序",@"筛选"]];
-    
-    _queryView = queryV;
-    //按钮点击
-    WS(ws)
-    queryV.queryBtnClick = ^(NSInteger index){
-        NSIndexPath *scrollIndexPath = [NSIndexPath indexPathForRow:0 inSection:0];
-        [ws.LookTableView scrollToRowAtIndexPath:scrollIndexPath atScrollPosition:UITableViewScrollPositionTop animated:YES];
-        
-        
-        for (UIView * rootV in ws.screeningMarr) {
-            if (rootV == ws.screeningMarr[index]) {
-                rootV.hidden = !rootV.hidden;
-            }else{
-            
-            rootV.hidden = YES;
-            }
-        }
-    };
-    
-    return queryV;
-}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

@@ -8,8 +8,6 @@
 
 #import "ZRDiscoveryTableCell.h"
 
-#define CategoryButtonTag            100
-
 @implementation ZRDiscoveryTableCell
 
 -(void)setCategoryDic:(NSDictionary *)categoryDic
@@ -25,7 +23,7 @@
     for (int i=0; i<_categoryDic.count; i++) {
         UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(x+i*(width+spacing), y, width, height)];
         [button setImage:ZRImage(_categoryDic.allValues[i]) forState:UIControlStateNormal];
-        button.tag = CategoryButtonTag+i;
+        button.tag = kDiscover_Category1+i;
         
         [button addTarget:self action:@selector(recommendBtnClick:) forControlEvents:UIControlEventTouchUpInside];
         

@@ -66,6 +66,12 @@
 - (void)loadTitleArray:(NSArray *)titleArray;
 
 
+/**
+ *  加载标题显示的方法2
+ */
+- (void)loadNomalTitleArray:(NSArray *)titleArray;
+
+
 
 - (void)buttonPressed:(UIButton *)sender;
 

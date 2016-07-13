@@ -7,54 +7,64 @@
 //
 
 #import "ZRGroupBuyingController.h"
-#import "ZRTableVIewHeadView.h"
+#import "ZRGroupBuyingCell.h"
 
+@interface ZRGroupBuyingController ()
 
-@interface ZRGroupBuyingController () <UITableViewDelegate,UITableViewDataSource>
-
-@property (nonatomic , weak) UITableView * GBTableView;
 
 @end
 
 @implementation ZRGroupBuyingController
 
--(UITableView *)GBTableView{
-    
-    if (_GBTableView == nil) {
-        UITableView * GBTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 64, ScreenWidth , ScreenHeight - 64) style:UITableViewStylePlain];
-        
-        [self.view addSubview:GBTableView];
-
-        GBTableView.backgroundColor = [UIColor clearColor];
-        
-        GBTableView.rowHeight = UITableViewAutomaticDimension;
-        GBTableView.estimatedRowHeight = 120.0;
-        
-        ZRTableVIewHeadView * tableViewHeadV = [[ZRTableVIewHeadView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, 191) andTitleArr:@[@"美食",@"丽人",@"娱乐",@"旅游",@"生活服务",@"精品购物",@"待定",@"待定"]];
-        
-        GBTableView.tableHeaderView = tableViewHeadV;
-        
-        _GBTableView = GBTableView;
-    }
-    return _GBTableView;
-}
-
-
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    //加载头视图
-    self.GBTableView.delegate = self;
-    self.GBTableView.dataSource = self;
+    self.screeningView.screeningViewClick = ^(NSString * infoStr){
+        NSLog(@"%@",infoStr);
+    };
 }
 
+- (void)createHeadView{
+    
+
+    for (int i = 0; i < self.ScreeningDict.count; i++) {
+      
+        
+        ZRScreeningView * screeningView = [[ZRScreeningView alloc] initWithFrame:CGRectMake(0, 104, ScreenWidth, ScreenHeight - 40)andTitleArr:self.ScreeningDict[self.queryArr[i]]];
+        [self.view addSubview:screeningView];
+        
+
+        
+        screeningView.screeningViewClick = ^(NSString * infoStr){
+            NSLog(@"%@",infoStr);
+        };
+        
+        [self.screeningMarr addObject:screeningView];
+    }
+    
+    
+    
+}
 #pragma mark - tableView代理
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
     return 1;
+
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return 10;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    static NSString * Cell = @"GroupBuyingCell";
+    ZRGroupBuyingCell *ordeingCell = [tableView dequeueReusableCellWithIdentifier:Cell];
+    
+    if (ordeingCell == nil) {
+        NSArray *nibs = [[NSBundle mainBundle]loadNibNamed:NSStringFromClass([ZRGroupBuyingCell class]) owner:self options:nil];
+        ordeingCell = [nibs lastObject];
+    }
+    
+    return ordeingCell;
 }
 
 

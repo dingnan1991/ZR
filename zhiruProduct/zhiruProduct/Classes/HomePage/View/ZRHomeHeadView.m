@@ -79,6 +79,7 @@
     [self addSubview:btnView];
     
     WS(ws)
+   
     [btnView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(ws.homeAdView.mas_bottom).offset(1);
         make.left.equalTo(ws.mas_left);

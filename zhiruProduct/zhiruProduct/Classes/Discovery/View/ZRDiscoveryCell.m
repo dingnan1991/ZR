@@ -307,7 +307,7 @@ static NSString *ID = @"ID";
 {
     
       switch (btnTag) {
-        case 100:
+        case kDiscover_Category1:
         {
             
             CGRect rect = [self.tableView rectForFooterInSection:0];
@@ -315,32 +315,32 @@ static NSString *ID = @"ID";
             
         }
             break;
-        case 100+1:
+        case kDiscover_Category1+1:
         {
             CGRect rect = [self.tableView rectForFooterInSection:1];
             [self.tableView setContentOffset:CGPointMake(0,CGRectGetMaxY(rect)) animated:YES];
             
         }
             break;
-        case 100+2:
+        case kDiscover_Category1+2:
         {
             CGRect rect = [self.tableView rectForFooterInSection:2];
             [self.tableView setContentOffset:CGPointMake(0,CGRectGetMaxY(rect)) animated:YES];
         }
             break;
-        case 100+3:
+        case kDiscover_Category1+3:
         {
             CGRect rect = [self.tableView rectForFooterInSection:3];
             [self.tableView setContentOffset:CGPointMake(0,CGRectGetMaxY(rect)) animated:YES];
         }
             break;
-        case 100+4:
+        case kDiscover_Category1+4:
         {
             CGRect rect = [self.tableView rectForFooterInSection:4];
             [self.tableView setContentOffset:CGPointMake(0,CGRectGetMaxY(rect)) animated:YES];
         }
             break;
-        case 100+5:
+        case kDiscover_Category1+5:
         {
             CGRect rect = [self.tableView rectForFooterInSection:5];
             [self.tableView setContentOffset:CGPointMake(0,CGRectGetMaxY(rect)) animated:YES];

@@ -43,6 +43,22 @@
 }
 
 
+/**
+ *  加载标题显示的方法2
+ */
+- (void)loadNomalTitleArray:(NSArray *)titleArray
+{
+    _titleArray = titleArray;
+    
+//    size1 = [NSString getSize:_titleArray[0] strFont:_textFont maxSize:self.bounds.size];
+//    size2 = [NSString getSize:_titleArray[1] strFont:_textFont maxSize:self.bounds.size];
+//    size3 = [NSString getSize:_titleArray[2] strFont:_textFont maxSize:self.bounds.size];
+    self.frame = CGRectMake(0, 0, SCREEN_WIDTH*_titleArray.count/5, 40);
+    
+    [self setUpNormalSubviews];
+}
+
+
 
 #pragma mark - Private methods
 - (void)setUpSubviews
@@ -81,11 +97,40 @@
 }
 
 
+
+- (void)setUpNormalSubviews
+{
+    if (!_textSeletedColor) {
+        _textSeletedColor = _textNormalColor;
+    }
+    
+    //_linView = [[UIView alloc]initWithFrame:CGRectMake(0, _fram.size.height-2, _fram.size.width/_titleArray.count, 2)];
+    //CGSize size = [NSString getSize:_titleArray[0] strFont:_textFont maxSize:self.bounds.size];
+    _linView = [[UIView alloc]initWithFrame:CGRectMake(0, self.frame.size.height-2, SCREEN_WIDTH/_titleArray.count, 2)];
+    
+    _linView.backgroundColor = _linColor;
+    [self addSubview:_linView];
+    for (int i = 0; i < _titleArray.count; i++) {
+        UIButton *button = [UIButton buttonWithType:UIButtonTypeSystem];
+        CGFloat width = SCREEN_WIDTH/5;
+        button.frame = CGRectMake(i*width, 0, width, 40);
+        button.tag = 10 + i;
+        button.titleLabel.font = _textFont;
+        i == 0?([button setTitleColor:_textSeletedColor forState:UIControlStateNormal]):([button setTitleColor:_textNormalColor forState:UIControlStateNormal]);
+        [button setTitle:_titleArray[i] forState:UIControlStateNormal];
+        [button addTarget:self action:@selector(buttonPressed:) forControlEvents:UIControlEventTouchUpInside];
+        [self addSubview:button];
+    }
+    
+}
+
+
+
 #pragma mark - click methods
 - (void)buttonPressed:(UIButton *)sender
 {
     [UIView animateWithDuration:0.3 animations:^{
-        _linView.frame = CGRectMake(sender.frame.origin.x, _linView.frame.origin.y, sender.frame.size.width, 4);
+        _linView.frame = CGRectMake(sender.frame.origin.x, _linView.frame.origin.y, sender.frame.size.width, _linView.height);
         
     } completion:nil];
     for (int i = 0; i<_titleArray.count; i++) {

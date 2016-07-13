@@ -37,7 +37,10 @@
     _textBg.layer.masksToBounds = YES;
     _textBg.layer.borderWidth = 0.7;
     _textBg.layer.borderColor = [UIColor grayColor].CGColor;
-
+    NSArray * subViewArr = _textBg.subviews;
+    for (UIView * subView in subViewArr) {
+        [subView removeFromSuperview];
+    }
 
     UIImageView *iconView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"sousuo-1"]];
     [_textBg addSubview:iconView];
